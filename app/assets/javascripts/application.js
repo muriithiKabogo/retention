@@ -12,4 +12,10 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+//= require jquery.min
+//= require bootstrap.min
+//= require jquery.slimscroll
+//= require custom.min
+//= require sidebar-nav.min
+
+
