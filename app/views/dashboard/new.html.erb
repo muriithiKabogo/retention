@@ -7,28 +7,7 @@
 	<!-- ============================================================== -->
 	<!-- Left Sidebar - style you can find in sidebar.scss  -->
 	<!-- ============================================================= -->
-	<div class="navbar-default sidebar" role="navigation">
-	    <div class="sidebar-nav slimscrollsidebar">
-	        <div class="sidebar-head">
-	            <h3> <span class="hide-menu">Navigation</span></h3> </div>
-	        <div class="user-profile">
-	            <!--provides a padding which can be used in the next place-->
-	        </div>
-	        <ul class="nav" id="side-menu">
-	            <li> <a href="#" class="waves-effect active"><span class="hide-menu"> Dashboard </a>
-	                
-	            </li>
-
-	            <li> <a href="#" class="waves-effect"><span class="hide-menu">UI Elements <span class="label label-rouded label-info pull-right">20</span> </span></a>
-	                
-	            </li>
-	            <li> <a href="#" class="waves-effect"><span class="hide-menu">Sample Pages<span class="label label-rouded label-warning pull-right">30</span></span></a>
-	            
-	            </li>
-	            
-	        </ul>
-	    </div>
-	</div>
+	<%= render 'layouts/navbar' %>
 	<!-- ============================================================== -->
 	<!-- End Left Sidebar -->
 	<!-- ============================================================== -->
@@ -41,7 +20,8 @@
 	            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
 	                 </div>
 	            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-	                <a href="#" target="_blank" class="btn btn-danger pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Buy Admin Now</a>
+	                <a href="#" target="_blank" class="btn btn-info pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">DEMO</a>
+	                
 	                
 	            </div>
 	            <!-- /.col-lg-12 -->
@@ -50,32 +30,72 @@
 	        <div class="row">
 	            <div class="col-lg-12 col-sm-12 col-xs-12">
 	                <div class="row">
+	                <%=link_to dashboard_churn_path do%>
 	                    <div class="col-lg-6 col-sm-6 col-xs-12">
 	                        <div class="white-box">
-	                            <h3 class="box-title">NEW CLIENTS</h3>
+	                            <h3 class="box-title">Users likely to churn</h3>                    
+                                 <label>Established</label>
 	                            <ul class="list-inline m-t-30 p-t-10 two-part">
 	                                <li> </li>
-	                                <li class="text-right"><span class="counter">23</span></li>
+	                                <li class="text-right"><span class="counter" style="color: #042ccc;">70</span></li>
 	                            </ul>
 	                        </div>
 	                    </div>
+	                 <%end%>
+					 <%=link_to dashboard_most_valuable_path do%>
 	                    <div class="col-lg-6 col-sm-6 col-xs-12">
 	                        <div class="white-box">
-	                            <h3 class="box-title">NEW Projects</h3>
+	                            <h3 class="box-title">Most Valuable customers</h3>
+	                            <label>Established</label>
 	                            <ul class="list-inline m-t-30 p-t-10 two-part">
 	                                <li></li>
-	                                <li class="text-right"><span class="counter">169</span></li>
+	                                <li class="text-right"><span class="counter" style="color: #042ccc;">84</span></li>
 	                            </ul>
 	                        </div>
 	                    </div>
+	                 <%end%>
 	                </div>
 	            </div>
 	            
 	        </div>
+
+	        <div class="row">
+	            <div class="col-lg-12 col-sm-12 col-xs-12">
+	                <div class="row">
+	                <%=link_to  dashboard_likely_convert_path do%>
+	                    <div class="col-lg-6 col-sm-6 col-xs-12">
+	                        <div class="white-box">
+	                            <h3 class="box-title">Users likely to convert</h3>
+	                            <label>onboarding</label>
+	                            <ul class="list-inline m-t-30 p-t-10 two-part">
+	                                <li> </li>
+	                                <li class="text-right"><span class="counter" style="color: #042ccc;">26</span></li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                 <%end%>
+	                 <%=link_to dashboard_churn_onboarding_path do%>
+	                    <div class="col-lg-6 col-sm-6 col-xs-12">
+	                        <div class="white-box">
+	                            <h3 class="box-title">Users likely to churn</h3>
+	                            <label>onboarding</label>
+	                            <ul class="list-inline m-t-30 p-t-10 two-part">
+	                                <li></li>
+	                                <li class="text-right"><span class="counter" style="color: #042ccc;">92</span></li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                   <%end%>
+	                </div>
+	            </div>
+	            
+	        </div>
+
+	        
 	        <!-- /.row -->      
 	    </div>
 	    <!-- /.container-fluid -->
-	    <footer class="footer text-center"> 2017 &copy; Ampleadmin brought to you by themedesigner.in </footer>
+	    <footer class="footer text-center"> 2017 &copy; Nestmetric - Customer retention platform </footer>
 	</div>
 <!-- /#page-wrapper -->
 </div>

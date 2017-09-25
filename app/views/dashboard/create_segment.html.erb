@@ -1,0 +1,208 @@
+<div id="wrapper">
+<!-- ============================================================== -->
+<!-- Topbar header - style you can find in pages.scss -->
+<!-- ============================================================== -->
+	
+	<!-- End Top Navigation -->
+	<!-- ============================================================== -->
+	<!-- Left Sidebar - style you can find in sidebar.scss  -->
+	<!-- ============================================================= -->
+	<%= render 'layouts/navbar' %>
+	<!-- ============================================================== -->
+	<!-- End Left Sidebar -->
+	<!-- ============================================================== -->
+	<!-- ============================================================== -->
+	<!-- Page Content -->
+	<!-- ============================================================== -->
+	<div id="page-wrapper">
+	    <div class="container-fluid">
+	        <div class="row bg-title">
+	 
+	            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+					 <h4 class="page-title"></h4>
+	            </div>
+	            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+	               
+	            <!-- /.col-lg-12 -->
+	        	</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 col-xs-12">
+					<div class="white-box">
+						<div class="row">
+							<div class="col-sm-12" align="center">
+								<h4>STEP 2: CREATE THE SEGMENT TO RECIEVE NOTIFICATION</h4>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-3">
+								<select class="form-control custom-select">
+									  <option selected>country</option>
+									  <option value="1">Nigeria</option>
+									  <option value="2">Ghana</option>
+									  <option value="3">United Kingdom</option>
+								</select>
+							</div>
+							<div class="col-sm-3">
+								<select class="form-control custom-select mydatepicker">
+									  <option selected>Last seen</option>
+									  <option value="1">5 days ago</option>
+									  <option value="2">30 days ago</option>
+									  <option value="3">40 days ago</option>
+								</select>
+							</div>
+							<div class="col-sm-3">
+								<select class="form-control custom-select">
+									  <option selected>upload times</option>
+									  <option value="1">5 times</option>
+									  <option value="2">10 times</option>
+									  <option value="3">15 times</option>
+								</select>
+							</div>
+							<div class="col-sm-3">
+								<select class="form-control custom-select">
+									  <option selected>logins per month</option>
+									  <option value="1">0-5</option>
+									  <option value="2">10-50</option>
+									  <option value="3">50-100</option>
+								</select>
+							</div>
+
+						</div><br>
+						<div class="row">
+							<div class="col-sm-4" align="center">
+								 <input type="text" placeholder="Email notification name" class="form-control">
+							</div>
+
+							<div class="col-sm-4" align="center">
+								Showing 10 of 300 users
+							</div>	
+
+							<div class="col-sm-4 pull-right" align="right">
+								<div class="btn-group">
+									<a href="/dashboard/campaign" type="button" class="btn btn-info">
+									Save notification
+									</a>
+								</div>
+							</div>	
+
+							
+
+						</div>
+					</div>
+				</div>				
+			</div>
+			
+
+	        <div class="row">
+	            <div class="col-lg-12 col-sm-12 col-xs-12">
+	              <div class="white-box">
+		            	<!-- <div class="table-responsive">
+	                                <table class="table">
+	                                    <thead>
+	                                        <tr>
+	                                            <th> User</th>
+	                                            <th> Last seen</th>
+	                                            <th> sessions</th>
+	                                            <th> last login</th>
+	                                            <th> session length</th>
+	                                            <th> Country</th>
+	                                        </tr>
+	                                    </thead>
+	                                    <tbody>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> Herman Beck</a></td>
+	                                            <td>3 days ago</td>
+	                                            <td>1 </td>
+	                                            <td><i class="fa fa-clock-o"></i> Sept 10, 2017</td>
+	                                            <td>
+	                                                1 min
+	                                            </td>
+	                                            <td>EN</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> Mary Adams</a></td>
+	                                            <td>10 min ago</td>
+	                                            <td>6 </td>
+	                                            <td><i class="fa fa-clock-o"></i> Sept 16, 2017</td>
+	                                            <td>
+	                                                5 min
+	                                            </td>
+	                                            <td>CN</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> Caleb Richards</a></td>
+	                                            <td>1 min ago</td>
+	                                            <td> 2 </td>
+	                                            <td><i class="fa fa-clock-o"></i> Sept 19, 2017</td>
+	                                            <td>
+	                                                10 min
+	                                            </td>
+	                                            <td>AU</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> June Lane</a></td>
+	                                            <td>3 months ago</td>
+	                                            <td>1 </td>
+	                                            <td><i class="fa fa-clock-o"></i> Apr 28, 2016</td>
+	                                            <td>
+	                                                1 min
+	                                            </td>
+	                                            <td>FR</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> Herman Beck</a></td>
+	                                            <td>3 days ago</td>
+	                                            <td>1</td>
+	                                            <td><i class="fa fa-clock-o"></i> Sept 10, 2017</td>
+	                                            <td>
+	                                                1 min
+	                                            </td>
+	                                            <td>EN</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> Mary Adams</a></td>
+	                                            <td>10 min ago</td>
+	                                            <td>6< </td>
+	                                            <td><i class="fa fa-clock-o"></i> Sept 16, 2017</td>
+	                                            <td>
+	                                                5 min
+	                                            </td>
+	                                            <td>CN</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> Caleb Richards</a></td>
+	                                            <td>1 min ago</td>
+	                                            <td> 2 </td>
+	                                            <td><i class="fa fa-clock-o"></i> Sept 19, 2017</td>
+	                                            <td>
+	                                                10 min
+	                                            </td>
+	                                            <td>AU</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> June Lane</a></td>
+	                                            <td>3 months ago</td>
+	                                            <td>1 </td>
+	                                            <td><i class="fa fa-clock-o"></i> Apr 28, 2016</td>
+	                                            <td>
+	                                                1 min
+	                                            </td>
+	                                            <td>FR</td>
+	                                        </tr>
+	                                    </tbody>
+	                                </table>
+	                      	</div> -->
+	                     </div>
+		            </div>
+	        </div>
+	        <!-- ============================================================== -->
+	    </div>
+	    <!-- /.container-fluid -->
+	    <footer class="footer text-center"> 2017 &copy; Ampleadmin brought to you by themedesigner.in </footer>
+	</div>
+<!-- /#page-wrapper -->
+</div>
+

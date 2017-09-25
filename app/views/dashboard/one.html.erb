@@ -1,3 +1,21 @@
+<script>
+$(document).ready(function(){
+    $("#installed").click(function(){
+    	console.log("showing...")
+    	$("#spinner").show();
+        $("#success").delay(2000).show(0);
+        $("#spinner").delay(2000).hide(0);
+
+        setTimeout(function(){
+	    	console.log("hiding...")
+        	$("#success").hide();
+        },6000);
+
+        $("#proceed").delay(6000).show(0);
+    });
+});
+</script>
+
 <div class="container-fluid" style="margin-top:50px; background-color: white;">
 	<div class="row">
 		<div style="text-align: center;">
@@ -28,14 +46,28 @@
 			</div>
 			<pre><span> < script > </span><br><div style="margin-left: 20px;">var nestmetric=nestmetric||[];nestmetric.Settings=function(e,a){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="//my.nestmetric.io/javascripts/nestmetric.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t);for(var s=function(e){return function(){nestmetric.push([e].concat(Array.prototype.slice.call(arguments,0)))}},c=["init","nestmetric","pageview","account","contact","track"],i=0;i<c.length;i++)nestmetric[c[i]]=s(c[i]);nestmetric.init(e,a)};
 			nestmetric.Settings("mFcD3YYHz9jhlL04ZzgLyg", {});</div><span> <br>< script > </span></pre>
-			<hr>
-			<div style="height: 40px; padding: 5px; margin-top: 30px; background-color: #d0cece;">
 
+			
+			<div>
 				Once you send your first event, check to make sure we're receiving data.
-				<a href="" class="btn btn-sm btn-info pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">CHECK &nbsp<i class="fa fa-refresh fa-spin"></i></a>
+
+				<button type="button" class="btn btn-sm btn-info pull-right m-l-20 waves-effect waves-light" id="installed">
+					CHECK &nbsp
+					<i id= "spinner"class="fa fa-refresh fa-spin" style="display: none;"></i>
+				</button>
+
+				<br>
+				<br>
+				<div id="success" role="alert" class="alert alert-success" style="display: none;">
+					<strong>Well Done</strong> You have successfuly installed
+				</div>
 			</div>
+			
 		</div>
 		<div class="col-md-3">
+		<a href="/" class="btn btn-sm btn-info pull-right m-l-20 waves-effect waves-light" id="proceed" style="display: none;">
+					Next
+				</a>
 		</div>
 	</div>
 
