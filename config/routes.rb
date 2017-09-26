@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'dashboard/segment'
   get 'dashboard/create_segment'
   get 'dashboard/compose_segmented'
-  root 'dashboard#new'
+  root 'dashboard#one'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
