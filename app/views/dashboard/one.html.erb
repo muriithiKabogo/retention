@@ -9,13 +9,27 @@ $(document).ready(function(){
         setTimeout(function(){
 	    	console.log("hiding...")
         	$("#success").hide();
-        },6000);
+        },3000);
 
-        $("#proceed").delay(6000).show(0);
+        $("#proceed").delay(3000).show(0);
     });
 });
 </script>
-
+<nav class="navbar navbar-default navbar-static-top m-b-0">
+    <div class="navbar-header">
+        
+        <!-- Search input and Toggle icon -->
+        <ul class="nav navbar-top-links navbar-right pull-right">
+            <li>
+               <a href="#">Logout</a>
+            </li>
+            
+        </ul>
+    </div>
+    <!-- /.navbar-header -->
+    <!-- /.navbar-top-links -->
+    <!-- /.navbar-static-side -->
+</nav>
 <div class="container-fluid" style="margin-top:50px; background-color: white;">
 	<div class="row">
 		<div style="text-align: center;">
@@ -61,13 +75,15 @@ $(document).ready(function(){
 				<div id="success" role="alert" class="alert alert-success" style="display: none;">
 					<strong>Well Done</strong> You have successfuly installed
 				</div>
+				<br>
+					<a href="/dashboard/new" class="btn btn-md btn-success pull-right m-l-20 waves-effect waves-light" id="proceed" style="display: none;">
+						Next
+					</a>
 			</div>
 			
 		</div>
 		<div class="col-md-3">
-		<a href="/dashboard/new" class="btn btn-sm btn-info pull-right m-l-20 waves-effect waves-light" id="proceed" style="display: none;">
-					Next
-				</a>
+		
 		</div>
 	</div>
 
