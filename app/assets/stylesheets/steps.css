@@ -113,6 +113,6 @@ content: none;
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #eliteregister li.active:before, #eliteregister li.active:after {
-background: #042ccc;
+background: #7ace4c;
 color: #fff;
 }
