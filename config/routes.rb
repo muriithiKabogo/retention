@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'dashboard/all_segments'
   get 'dashboard/settings'
   get 'dashboard/emptystate'
+  get 'dashboard/segment_empty'
+  get'dashboard/new_segment_emptystate'
   root 'dashboard#one'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

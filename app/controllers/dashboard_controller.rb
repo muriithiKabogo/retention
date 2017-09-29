@@ -54,5 +54,13 @@ class DashboardController < ApplicationController
     
   end
 
+  def segment_empty
+
+  end
+
+  def new_segment_emptystate
+    
+  end
+
   
 end
