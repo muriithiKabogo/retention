@@ -1,0 +1,112 @@
+<script>
+$(document).ready(function(){
+    $("#installed").click(function(){
+    	console.log("showing...")
+    	$("#spinner").show();
+        $("#success").delay(2000).show(0);
+        $("#spinner").delay(2000).hide(0);
+
+        setTimeout(function(){
+	    	console.log("hiding...")
+        	$("#success").hide();
+        },3000);
+
+       
+    });
+});
+</script>
+<%= render 'layouts/header' %>
+<div id="wrapper">
+<!-- ============================================================== -->
+<!-- Topbar header - style you can find in pages.scss -->
+<!-- ============================================================== -->
+	
+	<!-- End Top Navigation -->
+	<!-- ============================================================== -->
+	<!-- Left Sidebar - style you can find in sidebar.scss  -->
+	<!-- ============================================================= -->
+	<%= render 'layouts/navbar' %>
+	<!-- ============================================================== -->
+	<!-- End Left Sidebar -->
+	<!-- ============================================================== -->
+	<!-- ============================================================== -->
+	<!-- Page Content -->
+	<!-- ============================================================== -->
+	<div id="page-wrapper">
+	    <div class="container-fluid">
+	        <div class="row bg-title">
+	            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+	                 </div>
+	            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+	                <!-- <a href="#" target="_blank" class="btn btn-info pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">DEMO</a>
+	                 -->
+	                
+	            </div>
+	            <!-- /.col-lg-12 -->
+	        </div>
+	        <!-- ============================================================== -->
+	
+				<div class="row">
+			<div class="col-md-3">
+			<ul style="list-style-type: none;">
+				<li><a href="">See instructions</a></li>
+				<li><a href="">Do you need help setting up?</a></li>
+			</ul>
+			</div>
+			<div class="col-md-9">
+				<b><h3>Quick Javascript install</h3></b>
+				<div >
+					<span class="label label-rouded label-info pull-left">1</span>&nbsp <span class="">Paste this snippet into the header of your site (just before the closing  head tag).</span>
+				</div>
+				<pre><span> < script > </span><br><div style="margin-left: 20px;">var nestmetric=nestmetric||[];nestmetric.Settings=function(e,a){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="//my.nestmetric.io/javascripts/nestmetric.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t);for(var s=function(e){return function(){nestmetric.push([e].concat(Array.prototype.slice.call(arguments,0)))}},c=["init","nestmetric","pageview","account","contact","track"],i=0;i<c.length;i++)nestmetric[c[i]]=s(c[i]);nestmetric.init(e,a)};
+				nestmetric.Settings("mFcD3YYHz9jhlL04ZzgLyg", {});</div><span> <br>< script > </span></pre>
+				<br>
+				<div class="checkbox checkbox-info">
+	                <input id="checkbox4" type="checkbox" class="coupon_question" onchange="valueChanged()"/>
+	                <label for="checkbox4">  Would you like to also Identify users? <strong>(Highly recommended)</strong </label>
+	            </div>
+	            <div class="answer" >
+					<div >
+						<span class="label label-rouded label-info pull-left">2</span>&nbsp Identify contacts and accounts
+					</div>
+					<pre><span> < script > </span><br><div style="margin-left: 20px;">var nestmetric=nestmetric||[];nestmetric.Settings=function(e,a){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="//my.nestmetric.io/javascripts/nestmetric.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t);for(var s=function(e){return function(){nestmetric.push([e].concat(Array.prototype.slice.call(arguments,0)))}},c=["init","nestmetric","pageview","account","contact","track"],i=0;i<c.length;i++)nestmetric[c[i]]=s(c[i]);nestmetric.init(e,a)};
+					nestmetric.Settings("mFcD3YYHz9jhlL04ZzgLyg", {});</div><span> <br>< script > </span></pre>
+				
+					<br>
+					<div >
+						<span class="label label-rouded label-info pull-left">3</span>&nbsp Track pageviews and events
+					</div>
+					<pre><span> < script > </span><br><div style="margin-left: 20px;">var nestmetric=n<div>estmetric||[];nestmetric.Settings=function(e,a){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="//my.nestmetric.io/javascripts/nestmetric.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t);for(var s=function(e){return function(){nestmetric.push([e].concat(Array.prototype.slice.call(arguments,0)))}},c=["init","nestmetric","pageview","account","contact","track"],i=0;i<c.length;i++)nestmetric[c[i]]=s(c[i]);nestmetric.init(e,a)};
+					nestmetric.Settings("mFcD3YYHz9jhlL04ZzgLyg", {});</div><span> <br>< script > </span></pre>
+				</div><br>
+				<div class="">
+					<a href="">Send to developer <i class="fa fa-paper-plane"></i></a>
+					<button type="button" class="btn btn-sm btn-info pull-right m-l-20 waves-effect waves-light" id="installed">
+						VERIFY INSTALLATION &nbsp
+						<i id= "spinner"class="fa fa-refresh fa-spin" style="display: none;"></i>
+					</button>
+
+					<br>
+					<br>
+					<div id="success" role="alert" class="alert alert-success" style="display: none;">
+						<strong>Well Done</strong> You have successfuly installed
+					</div>
+					<br>
+						<a href="/dashboard/new" class="btn btn-md btn-success pull-right m-l-20 waves-effect waves-light" id="proceed" style="display: none;">
+							Next
+						</a>
+				</div>
+				
+			</div>
+		
+	</div>
+
+	        
+	        <!-- /.row -->      
+	    </div>
+	    <!-- /.container-fluid -->
+	    <footer class="footer text-center"> 2017 &copy; Nestmetric - Customer retention platform </footer>
+	</div>
+<!-- /#page-wrapper -->
+</div>
+

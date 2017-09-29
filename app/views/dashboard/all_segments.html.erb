@@ -1,0 +1,125 @@
+<%= render 'layouts/header' %>
+<div id="wrapper">
+<!-- ============================================================== -->
+<!-- Topbar header - style you can find in pages.scss -->
+<!-- ============================================================== -->
+	
+	<!-- End Top Navigation -->
+	<!-- ============================================================== -->
+	<!-- Left Sidebar - style you can find in sidebar.scss  -->
+	<!-- ============================================================= -->
+	<%= render 'layouts/navbar' %>
+	<!-- ============================================================== -->
+	<!-- End Left Sidebar -->
+	<!-- ============================================================== -->
+	<!-- ============================================================== -->
+	<!-- Page Content -->
+	<!-- ============================================================== -->
+	<div id="page-wrapper">
+	    <div class="container-fluid">
+	        <div class="row bg-title">
+	 
+	            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+					 <h4 class="page-title">All Your Segments</h4>
+	            </div>
+	            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+		            <div class="btn-group pull-right offset-sm-2">
+						<a href="/dashboard/segment" type="button" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true" ></i> Create a new segment</a>
+
+						</div>
+	        	</div>
+			</div>
+
+			
+
+	        <div class="row">
+	            <div class="col-lg-12 col-sm-12 col-xs-12">
+	              <div class="white-box">
+		            	<div class="table-responsive">
+	                                <table class="table">
+	                                    <thead>
+	                                        <tr>
+	                                            <th> Segment name</th>
+	                                            <th> created</th>
+	                                            <th> Number of users</th>
+	                                            <th> Edit Segment</th>
+	                                            <th> Delete Segment</th>
+	                                            
+	                                        </tr>
+	                                    </thead>
+	                                    <tbody>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)">Users likely to churn</a></td>
+	                                            <td>3 months ago</td>
+	                                            <td><span class="text-muted"></span>70</td>
+	                                            <td>
+                                            		<button type="button" class="btn btn-sm btn-info m-l-20 " >
+														Edit
+													</button>
+												</td>
+	                                            <td>
+	                                                <button type="button" class="btn btn-sm btn-danger m-l-20 " >
+														Delete
+													</button>
+	                                            </td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> Most Valuable customers</a></td>
+	                                            <td>3 months ago</td>
+	                                            <td>84 </td>
+	                                            <td>
+	                                            	<button type="button" class="btn btn-sm btn-info m-l-20 " >
+														Edit
+													</button>
+	                                            </td>
+	                                            <td>
+	                                               <button type="button" class="btn btn-sm btn-danger m-l-20 " >
+														Delete
+													</button>
+	                                            </td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)"> CUsers likely to convert</a></td>
+	                                            <td>3 months ago</td>
+	                                            <td> 26</td>
+	                                            <td>
+	                                            	<button type="button" class="btn btn-sm btn-info m-l-20 " >
+														Edit
+													</button>
+	                                            </td>
+	                                            <td>
+	                                                 <button type="button" class="btn btn-sm btn-danger m-l-20 " >
+														Delete
+													</button>
+	                                            </td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td><a href="javascript:void(0)">Users likely to churn</a></td>
+	                                            <td>3 months ago</td>
+	                                            <td><span class="text-muted"></span>92</td>
+	                                            <td>
+	                                            	<button type="button" class="btn btn-sm btn-info m-l-20 " >
+														Edit
+													</button>
+	                                            </td>
+	                                            <td> 
+	                                                 <button type="button" class="btn btn-sm btn-danger m-l-20 " >
+														Delete
+													</button>
+	                                            </td>
+	                                        </tr>
+	                                       
+	                                    </tbody>
+	                                </table>
+	                      	</div>
+	                     </div>
+		            </div>
+	        </div>
+	        <!-- ============================================================== -->
+	    </div>
+	    <!-- /.container-fluid -->
+	    <footer class="footer text-center"> 2017 &copy; Ampleadmin brought to you by themedesigner.in </footer>
+	</div>
+<!-- /#page-wrapper -->
+</div>
+

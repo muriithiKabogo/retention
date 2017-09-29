@@ -40,6 +40,19 @@ class DashboardController < ApplicationController
   end
 
   def compose_segmented
+
   end
+
+  def all_segments
+    
+  end
+
+  def settings
+  end
+
+  def emptystate
+    
+  end
+
   
 end
