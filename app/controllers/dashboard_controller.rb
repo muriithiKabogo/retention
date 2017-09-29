@@ -62,5 +62,9 @@ class DashboardController < ApplicationController
     
   end
 
+  def campaign_segment
+    
+  end
+
   
 end
