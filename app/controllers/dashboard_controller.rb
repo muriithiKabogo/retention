@@ -66,5 +66,9 @@ class DashboardController < ApplicationController
     
   end
 
+  def customer
+    
+  end
+
   
 end

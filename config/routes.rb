@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   get 'dashboard/emptystate'
   get 'dashboard/segment_empty'
   get 'dashboard/new_segment_emptystate'
-   get 'dashboard/campaign_segment'
+  get 'dashboard/campaign_segment'
+  get 'dashboard/customer'
   root 'dashboard#one'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,0 +1,132 @@
+<%= render 'layouts/header' %>
+<div id="wrapper">
+<!-- ============================================================== -->
+<!-- Topbar header - style you can find in pages.scss -->
+<!-- ============================================================== -->
+	
+	<!-- End Top Navigation -->
+	<!-- ============================================================== -->
+	<!-- Left Sidebar - style you can find in sidebar.scss  -->
+	<!-- ============================================================= -->
+	<%= render 'layouts/navbar' %>
+	<!-- ============================================================== -->
+	<!-- End Left Sidebar -->
+	<!-- ============================================================== -->
+	<!-- ============================================================== -->
+	<!-- Page Content -->
+	<!-- ============================================================== -->
+	<div id="page-wrapper">
+	    <div class="container-fluid">
+	        <div class="row bg-title">
+	            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+	                 </div>
+	            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+	                <!-- <a href="#" target="_blank" class="btn btn-info pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">DEMO</a>
+	                 -->
+	                <a href="/dashboard/emptystate" type="button" class="btn btn-info pull-right">
+									empty state
+									</a>
+	            </div>
+	            <!-- /.col-lg-12 -->
+	        </div>
+	        <!-- ============================================================== -->
+	        <div class="row">
+	        	<div class="col-md-4 col-xs-12">
+                        <div class="white-box">
+                            
+                                <div class="overlay-box">
+                                    <div class="user-content">
+                                        <div class="user-bg" style="height: 226px;" >
+                        					 <%= image_tag "310bunideals.png"%>
+                        					 
+                        				 </div>
+                                        </div>
+                                </div>
+							
+							<div class="row text-center m-t-10">
+                                    <div class="col-md-6 b-r"><strong>Name</strong>
+                                        <p>John Smith</p>
+                                    </div>
+                                    <div class="col-md-6"><strong>Email</strong>
+                                        <p>john@deals.com</p>
+                                    </div>
+                              </div>
+
+                              <div class="row text-center m-t-10">
+                                    <div class="col-md-6 b-r"><strong>Company</strong>
+                                        <p>BuniDeals</p>
+                                    </div>
+                                    <div class="col-md-6"><strong>Country</strong>
+                                        <p>USA</p>
+                                    </div>
+                              </div>
+
+                                <div class="row text-center m-t-10">
+                                    <div class="col-md-6 b-r"><strong>Last seen</strong>
+                                        <p>3 days ago</p>
+                                    </div>
+                                    <div class="col-md-6"><strong>Sessions</strong>
+                                        <p>1</p>
+                                    </div>
+                              </div>
+
+                               <div class="row text-center m-t-10">
+                                    <div class="col-md-6 b-r"><strong>logins</strong>
+                                        <p>25</p>
+                                    </div>
+                                    <div class="col-md-6"><strong>NPS</strong>
+                                        <p>5</p>
+                                    </div>
+                              </div>
+
+                        </div>
+                </div>
+
+                <div class="col-md-8 col-xs-12">
+                	<div class="white-box">
+                		<ul class="nav nav-tabs tabs customtab">
+                                <li class="active tab">
+                                    <a href="#home" data-toggle="tab"> <span class="visible-xs"><i class="fa fa-home"></i></span> <span class="hidden-xs">Activity for &nbsp; <%= Date.today%> </span> </a> 
+                                </li>      
+                        </ul>
+                         <div class="tab-pane active" id="home">
+                                    <div class="steamline">
+                                        <div class="sl-item">
+                                            <div class="m-l-40"><a href="#" class="text-info">Logged out</a> <span class ="sl-date">5 minutes ago</span>             
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="sl-item">
+                                            <div class="m-l-40"><a href="#" class="text-info">Uploaded Inventory</a> <span class ="sl-date"> 8 minutes ago</span>             
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="sl-item">
+                                            <div class="m-l-40"><a href="#" class="text-info">Visited inventory page</a> <span class ="sl-date">8 minutes ago</span>             
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="sl-item">
+                                            <div class="m-l-40"><a href="#" class="text-info">Clicked on the inventory menu item</a> <span class ="sl-date">9 minutes ago</span>             
+                                            </div>
+                                        
+                                        </div>
+
+                                         <div class="sl-item">
+                                            <div class="m-l-40"><a href="#" class="text-info">Logged in</a> <span class ="sl-date">10 minutes ago</span>             
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                           </div>
+                	</div>
+                </div>
+	        </div>     
+	        <!-- /.row -->      
+	    </div>
+	    <!-- /.container-fluid -->
+	    <%= render 'layouts/footer' %>
+	</div>
+<!-- /#page-wrapper -->
+</div>
+
