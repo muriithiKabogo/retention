@@ -1,3 +1,22 @@
+<script>
+$(document).ready(function(){
+    $("#installed").click(function(){
+    	console.log("showing...")
+    	$("#switch").show();
+
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#installed").click(function(){
+    	console.log("showing...")
+    	$("#switch").show();
+
+    });
+});
+</script>
 <%= render 'layouts/header' %>
 <div id="wrapper">
 <!-- ============================================================== -->
@@ -78,7 +97,7 @@
 									  <option selected>country</option>
 									  <option value="1">Nigeria</option>
 									  <option value="2">Ghana</option>
-									  <option value="3">United Kingdom</option>
+									  <option value="3" id="installed">United Kingdom</option>
 								</select>
 							</div>
 							<div class="col-sm-3">
@@ -116,7 +135,7 @@
 	        <div class="row">
 	            <div class="col-lg-12 col-sm-12 col-xs-12">
 	              <div class="white-box">
-		            	<!-- <div class="table-responsive">
+		            	<div class="table-responsive">
 	                                <table class="table">
 	                                    <thead>
 	                                        <tr>
@@ -128,8 +147,8 @@
 	                                            <th> Country</th>
 	                                        </tr>
 	                                    </thead>
-	                                    <tbody>
-	                                        <tr>
+	                                    <tbody id="switch" style="display: none;">
+	                                        <tr >
 	                                            <td><a href="javascript:void(0)"> Herman Beck</a></td>
 	                                            <td>3 days ago</td>
 	                                            <td>1 </td>
@@ -182,7 +201,7 @@
 	                                        <tr>
 	                                            <td><a href="javascript:void(0)"> Mary Adams</a></td>
 	                                            <td>10 min ago</td>
-	                                            <td>6< </td>
+	                                            <td>6</td>
 	                                            <td><i class="fa fa-clock-o"></i> Sept 16, 2017</td>
 	                                            <td>
 	                                                5 min
@@ -211,7 +230,7 @@
 	                                        </tr>
 	                                    </tbody>
 	                                </table>
-	                      	</div> -->
+	                      	</div>
 	                     </div>
 		            </div>
 	        </div>
