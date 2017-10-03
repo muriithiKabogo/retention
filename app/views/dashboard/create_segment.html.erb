@@ -1,9 +1,7 @@
 <script>
-$(document).ready(function(){
+$(document).on("turbolinks:load",function(){
     $("#installed").click(function(){
-    	console.log("showing...")
     	$("#switch").show();
-
     });
 });
 </script>
@@ -88,7 +86,7 @@ $(document).ready(function(){
 									  <option selected>country</option>
 									  <option value="1">Nigeria</option>
 									  <option value="2">Ghana</option>
-									  <option value="3" id="installed">United Kingdom</option>
+									  <option id="installed" value="3">United Kingdom</option>
 								</select>
 							</div>
 							<div class="col-sm-3">
@@ -102,9 +100,10 @@ $(document).ready(function(){
 							<div class="col-sm-3">
 								<select class="form-control custom-select">
 									  <option selected>upload times</option>
-									  <option value="1">5 times</option>
-									  <option value="2">10 times</option>
-									  <option value="3">15 times</option>
+									  <option value="1">0 times</option>
+									  <option value="2">5 times</option>
+									  <option value="3">10 times</option>
+									  <option value="4">15 times</option>
 								</select>
 							</div>
 							<div class="col-sm-3">
@@ -147,7 +146,7 @@ $(document).ready(function(){
 	                                            <td>
 	                                                1 min
 	                                            </td>
-	                                            <td>EN</td>
+	                                            <td>UK</td>
 	                                        </tr>
 	                                        <tr>
 	                                            <td><a href="javascript:void(0)"> Mary Adams</a></td>
@@ -157,7 +156,7 @@ $(document).ready(function(){
 	                                            <td>
 	                                                5 min
 	                                            </td>
-	                                            <td>CN</td>
+	                                            <td>UK</td>
 	                                        </tr>
 	                                        <tr>
 	                                            <td><a href="javascript:void(0)"> Caleb Richards</a></td>
@@ -167,7 +166,7 @@ $(document).ready(function(){
 	                                            <td>
 	                                                10 min
 	                                            </td>
-	                                            <td>AU</td>
+	                                            <td>UK</td>
 	                                        </tr>
 	                                        <tr>
 	                                            <td><a href="javascript:void(0)"> June Lane</a></td>
@@ -177,7 +176,7 @@ $(document).ready(function(){
 	                                            <td>
 	                                                1 min
 	                                            </td>
-	                                            <td>FR</td>
+	                                            <td>UK</td>
 	                                        </tr>
 	                                        <tr>
 	                                            <td><a href="javascript:void(0)"> Herman Beck</a></td>
@@ -187,7 +186,7 @@ $(document).ready(function(){
 	                                            <td>
 	                                                1 min
 	                                            </td>
-	                                            <td>EN</td>
+	                                            <td>UK</td>
 	                                        </tr>
 	                                        <tr>
 	                                            <td><a href="javascript:void(0)"> Mary Adams</a></td>
@@ -207,7 +206,7 @@ $(document).ready(function(){
 	                                            <td>
 	                                                10 min
 	                                            </td>
-	                                            <td>AU</td>
+	                                            <td>UK</td>
 	                                        </tr>
 	                                        <tr>
 	                                            <td><a href="javascript:void(0)"> June Lane</a></td>
@@ -217,7 +216,7 @@ $(document).ready(function(){
 	                                            <td>
 	                                                1 min
 	                                            </td>
-	                                            <td>FR</td>
+	                                            <td>UK</td>
 	                                        </tr>
 	                                    </tbody>
 	                                </table>
