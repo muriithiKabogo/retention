@@ -77,10 +77,10 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
-#
+#schema_search_path: abacus
 production:
   <<: *default
   database: customer_retetion_production
   username: customer_retetion
   password: <%= ENV['CUSTOMER_RETETION_DATABASE_PASSWORD'] %>
-  schema_search_path: abacus
+  
