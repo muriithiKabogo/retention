@@ -83,4 +83,4 @@ production:
   database: customer_retetion_production
   username: customer_retetion
   password: <%= ENV['CUSTOMER_RETETION_DATABASE_PASSWORD'] %>
-  schema_search_path: abacus,public
+  schema_search_path: production,public
