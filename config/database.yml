@@ -83,4 +83,3 @@ production:
   database: customer_retetion_production
   username: customer_retetion
   password: <%= ENV['CUSTOMER_RETETION_DATABASE_PASSWORD'] %>
-  schema_search_path: postgres://jrnouevatnfylb:b2ea0c9b649676fdd4f5beeb0957207f96a881ecdf06d75d653cfb3239bf7d1d@ec2-54-83-19-82.compute-1.amazonaws.com:5432/d1a2eeevdu8450?schema_search_path=abacus,public
