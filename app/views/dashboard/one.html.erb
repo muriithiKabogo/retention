@@ -29,7 +29,7 @@ $(document).ready(function(){
         <!-- Search input and Toggle icon -->
         <ul class="nav navbar-top-links navbar-right pull-right">
             <li>
-               <a href="#">Logout</a>
+               <%= link_to 'logout', destroy_user_session_path,:method => :delete %>
             </li>
             
         </ul>
