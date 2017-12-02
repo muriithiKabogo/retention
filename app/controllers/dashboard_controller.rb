@@ -16,9 +16,13 @@ class DashboardController < ApplicationController
   end
 
   def most_valuable
+    puts ActiveRecord::Base.connection.schema_search_path
+    # result = ActiveRecord::Base.connection.execute("select * from projects")
 
+    # result.each do |row|
+    #   puts row
+    # end
   end
-
   def likely_convert
 
   end
