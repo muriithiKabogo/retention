@@ -1,3 +1,4 @@
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 <script>
 $(document).ready(function(){
     $("#installed").click(function(){
@@ -68,12 +69,42 @@ $(document).ready(function(){
 			<div >
 				<span class="label label-rouded label-info pull-left">1</span>&nbsp <span class="">Paste this snippet into the header of your site (just before the closing  head tag).</span>
 			</div>
-			<pre><span> < script > </span><br><div style="margin-left: 20px;">var nestmetric=nestmetric||[];nestmetric.Settings=function(e,a){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="//my.nestmetric.io/javascripts/nestmetric.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t);for(var s=function(e){return function(){nestmetric.push([e].concat(Array.prototype.slice.call(arguments,0)))}},c=["init","nestmetric","pageview","account","contact","track"],i=0;i<c.length;i++)nestmetric[c[i]]=s(c[i]);nestmetric.init(e,a)};
-			nestmetric.Settings("mFcD3YYHz9jhlL04ZzgLyg", {});</div><span> <br>< script > </span></pre>
+<pre class="prettyprint lang-js" >&lt;script&gt;
+(function(e,t){var r=e.rakam||{};var n=t.createElement("script");n.type="text/javascript";
+n.async=true;n.src="https://d2f7xo8n6nlhxf.cloudfront.net/rakam.min.js";
+n.onload=function(){e.rakam.runQueuedFunctions()};var a=t.getElementsByTagName("script")[0];
+a.parentNode.insertBefore(n,a);function s(e,t){e[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+return this}}var i=function(){this._q=[];return this};var o=["set","setOnce","increment","unset"];
+for(var c=0;c&lt;o.length;c++){s(i.prototype,o[c])}r.User=i;r._q=[];var u=["init","logEvent","logInlinedEvent","setUserId","getUserId","getDeviceId","setSuperProperties","setOptOut","setVersionName","setDomain","setUserProperties","setDeviceId","onload","onEvent","getTimeOnPreviousPage","getTimeOnPage","startTimer","isReturningUser"];
+for(var m=0;m&lt;u.length;m++){s(r,u[m])}e.rakam=r})(window,document);
+
+rakam.init("<%=@write_key%>", "user_id", { 
+apiEndpoint:"nestmetricai.herokuapp.com", 
+saveEvents: true,
+batchEvents: true,
+eventUploadThreshold: 30,
+eventUploadPeriodMillis: 30000,
+includeUtm: true, 
+trackClicks: true, 
+trackForms: true, 
+includeReferrer: true 
+}, function() {
+var e = document.documentElement, g = document.getElementsByTagName('body')[0],
+x = window.innerWidth || e.clientWidth || g.clientWidth,
+y = window.innerHeight|| e.clientHeight|| g.clientHeight;
+
+rakam.logEvent("pageview", {url: window.location.pathname, time_on_page: rakam.getTimeOnPreviousPage(), returning_session: rakam.isReturningUser(), color_depth: window.screen.colorDepth, viewport: x + ' × ' + y, title: document.title});
+});
+rakam.startTimer(true);
+
+rakam.setSuperProperties({platform: 'Web', _ip: true, _user_agent:true, _referrer:document.referrer, resolution: window.screen.width+" × "+window.screen.height}, true);
+&lt;/script&gt;</pre>
+			
+			
 			<br>
 			<div class="checkbox checkbox-info">
                 <input id="checkbox4" type="checkbox" class="coupon_question" onchange="valueChanged()"/>
-                <label for="checkbox4">  Would you like to also Identify users? <strong>(Highly recommended)</strong </label>
+               <!--  <label for="checkbox4">  Would you like to also Identify users? <strong>(Highly recommended)</strong </label> -->
             </div>
             <div class="answer" style="display: none;">
 				<div >

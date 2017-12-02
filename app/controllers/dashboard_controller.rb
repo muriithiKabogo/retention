@@ -5,6 +5,9 @@ class DashboardController < ApplicationController
   end
 
   def one
+    @user = current_user
+    @project = @user.projects.first
+    @write_key = @project.writeKey
 
   end
 

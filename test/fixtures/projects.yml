@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  projectName: MyString
   masterKey: MyString
   readKey: MyString
-  writeKey: MyString
+  write: 
   website: MyString
   user: one
 
 two:
-  name: MyString
+  projectName: MyString
   masterKey: MyString
   readKey: MyString
-  writeKey: MyString
+  write: 
   website: MyString
   user: two
