@@ -22,6 +22,8 @@ class DashboardController < ApplicationController
     result.each do |row|
       puts row
     end
+
+    ActiveRecord::Base.connection.schema_search_path = "public"
   end
   def likely_convert
 
