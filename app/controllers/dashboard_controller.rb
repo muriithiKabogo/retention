@@ -16,6 +16,7 @@ class DashboardController < ApplicationController
   end
 
   def most_valuable
+    ActiveRecord::Base.connection.schema_search_path = "abacus"
     puts ActiveRecord::Base.connection.schema_search_path
     # result = ActiveRecord::Base.connection.execute("select * from projects")
 
