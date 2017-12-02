@@ -18,7 +18,7 @@ class DashboardController < ApplicationController
   def most_valuable
     ActiveRecord::Base.connection.schema_search_path = "abacus,public"
     puts ActiveRecord::Base.connection.schema_search_path
-    result = ActiveRecord::Base.connection.execute("select * from pageview")
+    result = Pageview.all#ActiveRecord::Base.connection.execute("select * from pageview")
     result.each do |row|
       puts row
     end
