@@ -18,11 +18,10 @@ class DashboardController < ApplicationController
   def most_valuable
     ActiveRecord::Base.connection.schema_search_path = "abacus,public"
     puts ActiveRecord::Base.connection.schema_search_path
-    result = Pageview.all#ActiveRecord::Base.connection.execute("select * from pageview")
+    result = ActiveRecord::Base.connection.execute("select * from pageview")
     result.each do |row|
       puts row
     end
-   ActiveRecord::Base.connection.schema_search_path = "public"
   end
   def likely_convert
 
