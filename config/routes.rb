@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'event_collections/index'
+
   get 'projects/new'
   post 'projects/create'
 
