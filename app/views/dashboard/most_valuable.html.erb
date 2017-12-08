@@ -118,10 +118,11 @@
 	                                   
 	                                    <tbody>
 	                                        <tr><%@result.each do |row|%> 
-	                                            <td><%@all_keys.each do |key|%>
-	                                            	<%=row[key]%>
-	                                            	<%end%>	
-	                                            </td>  
+	                                        		<%@all_keys.each do |key|%>
+	                                            		<td>
+	                                            			<%=row[key]%>
+	                                            		</td> 
+	                                            	<%end%>	 
 	                                            <%end%>
 	                                        </tr>
 	                                        
