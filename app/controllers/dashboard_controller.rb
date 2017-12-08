@@ -6,9 +6,9 @@ class DashboardController < ApplicationController
 
   def one
     @user = current_user
-    puts @user
+    puts @user.email
     @project = @user.projects.first
-    puts @project
+    puts @project.id
     @write_key = @project.writeKey
 
   end
