@@ -114,17 +114,15 @@
 	                                     	</tr>
 	                                     
 	                                    </thead>
-	                                   
+	                                   <%@result.each do |row|%>
 	                                    <tbody>
 	                                        <tr>
-	                                        <%@result.each do |row|%>
 	                                            <td><%=row["_user"]%></td><br>
-	                                         <%end%>
 	                                        </tr>
 	                                        
 	                                    </tbody>
 	                                </table>
-	                        
+	                        <%end%>
 	                      	</div>
 	                     </div>
 		            </div>
