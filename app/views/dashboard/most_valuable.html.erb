@@ -107,21 +107,24 @@
 		            	
 	                                <table class="table">
 	                                    <thead>
-	                                    <%@result.first.keys.each do |key|%>
 											<tr>
+											<%@result.first.keys.each do |key|%>
 	                                     		<th><%=key%></th>
+	                                     	<%end%>
 	                                     	</tr>
-	                                     <%end%>
+	                                     
 	                                    </thead>
-	                                   <%@result.each do |row|%>
+	                                   
 	                                    <tbody>
 	                                        <tr>
+	                                        <%@result.each do |row|%>
 	                                            <td><%=row["_user"]%></td><br>
+	                                         <%end%>
 	                                        </tr>
 	                                        
 	                                    </tbody>
 	                                </table>
-	                        <%end%>
+	                        
 	                      	</div>
 	                     </div>
 		            </div>
