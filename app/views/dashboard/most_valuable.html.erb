@@ -108,7 +108,6 @@
 	                                <table class="table">
 	                                    <thead>
 											<tr>
-											<th>user</th>
 											<%@result.first.keys.each do |key|%>
 	                                     		<th><%=key%></th>
 	                                     		<%@all_keys.push(key)%>
@@ -117,15 +116,17 @@
 	                                     
 	                                    </thead>
 	                                   <%@result.each do |row|%>
+	                                   <%=@all_keys.each do |field|%>
 	                                    <tbody>
 	                                        <tr>
-	                                        	<%=@all_keys.each do |field|%>
+	                                        	
 	                                            <td><%=row[field]%></td><br>
-	                                            <%end%>
+	                                            
 	                                        </tr>
 	                                        
 	                                    </tbody>
 	                                </table>
+	                                <%end%>
 	                        <%end%>
 	                      	</div>
 	                     </div>
