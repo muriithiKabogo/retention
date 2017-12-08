@@ -19,10 +19,9 @@ class DashboardController < ApplicationController
     @user = current_user
     @project = @user.projects.first
     @project_name = @project.projectName
-    ActiveRecord::Base.connection.schema_search_path = "#{project_name},public"
+    ActiveRecord::Base.connection.schema_search_path = "#{@project_name},public"
     puts ActiveRecord::Base.connection.schema_search_path
     result = ActiveRecord::Base.connection.execute("select * from pageview")
-    
   end
   def likely_convert
 
