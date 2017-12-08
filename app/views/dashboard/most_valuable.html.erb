@@ -107,10 +107,12 @@
 		            	
 	                                <table class="table">
 	                                    <thead>
+	                                    <%@result.each do|r|%>
 	                                        <tr>
-	                                            <th><input><%=@result.class%></th>
+	                                            <th><%=r.class%></th>
 	                                            
 	                                        </tr>
+	                                     <%end%>
 	                                    </thead>
 	                                   <%@result.each do |row|%>
 	                                    <tbody>
