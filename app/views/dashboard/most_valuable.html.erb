@@ -107,15 +107,11 @@
 		            	
 	                                <table class="table">
 	                                    <thead>
-	                                    <%=@result.each do|r|%>
-	                                        <tr>
-	                                            <th><%=r.keys.class%></th>
-	                                            <%break%>
-	                                        </tr>
-	                                     <%end%>
+	                                    <%@result.first.keys.each do |key|%>
 											<tr>
-	                                     		<th><%=@result.first.keys%></th>
+	                                     		<th><%=key%></th>
 	                                     	</tr>
+	                                     <%end%>
 	                                    </thead>
 	                                   <%@result.each do |row|%>
 	                                    <tbody>
