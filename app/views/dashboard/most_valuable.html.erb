@@ -111,6 +111,7 @@
 											<th>user</th>
 											<%@result.first.keys.each do |key|%>
 	                                     		<th><%=key%></th>
+	                                     		<%@all_keys.push(key)%>
 	                                     	<%end%>
 	                                     	</tr>
 	                                     
@@ -118,7 +119,9 @@
 	                                   <%@result.each do |row|%>
 	                                    <tbody>
 	                                        <tr>
+	                                        	<%=@all_keys.each do |field|%>
 	                                            <td><%=row["_user"]%></td><br>
+	                                            <%end%>
 	                                        </tr>
 	                                        
 	                                    </tbody>
