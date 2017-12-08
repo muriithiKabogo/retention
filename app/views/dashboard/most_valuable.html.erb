@@ -115,13 +115,13 @@
 	                                     	</tr>
 	                                     
 	                                    </thead>
-	                                   <%@result.each do |row|%> 
+	                                   
 	                                    <tbody>
-	                                        <tr>
+	                                        <tr><%@result.each do |row|%> 
 	                                            <td><%@all_keys.each do |key|%>
 	                                            	<%=row[key]%>
 	                                            	<%end%>	
-	                                            </td><br>  
+	                                            </td>  
 	                                        </tr>
 	                                        
 	                                    </tbody>
