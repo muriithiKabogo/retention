@@ -116,16 +116,18 @@
 	                                     
 	                                    </thead>
 	                                   <%@result.each do |row|%> 
-	                                   <%=@all_keys.each do |key|%>
 	                                    <tbody>
 	                                        <tr>
-	                                            <td><%=row[key]%></td><br>  
+	                                            <td><%@all_keys.each do |key|%>
+	                                            	<%=row[key]%>
+	                                            	<%end%>	
+	                                            </td><br>  
 	                                        </tr>
 	                                        
 	                                    </tbody>
-	                                    <%end%>
+	                                    
 	                                </table>
-	                                
+	                               
 	                        		<%end%>
 
 
