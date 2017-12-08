@@ -6,10 +6,10 @@ class DashboardController < ApplicationController
 
   def one
     @user = current_user
-    puts @user.email
-    @project = @user.projects.first
-    puts @project.id
-    @write_key = @project.writeKey
+    @project = @user.projects
+    @project.each do |project|
+      puts project
+    end
 
   end
 
@@ -25,6 +25,7 @@ class DashboardController < ApplicationController
       puts row
     end
   end
+
   def likely_convert
 
   end
