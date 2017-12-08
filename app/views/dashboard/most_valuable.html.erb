@@ -60,7 +60,7 @@
 							
 
 						</div><br>FILTER
-						<div class="row">
+						<!-- <div class="row">
 							<div class="col-sm-3">
 								<select class="form-control custom-select">
 									  <option selected>country</option>
@@ -94,7 +94,7 @@
 								</select>
 							</div>
 
-						</div>
+						</div> -->
 					</div>
 				</div>				
 			</div>
@@ -108,12 +108,11 @@
 	                                <table class="table">
 	                                    <thead>
 											<tr>
-											<%@result.first.keys.each do |key|%>
-	                                     		<th><%=key%></th>
-	                                     		<%@all_keys.push(key)%>
-	                                     	<%end%>
-	                                     	</tr>
-	                                     
+												<%@result.first.keys.each do |key|%>
+		                                     		<th><%=key%></th>
+		                                     		<%@all_keys.push(key)%>
+		                                     	<%end%>
+	                                     	</tr>            
 	                                    </thead>
 	                                   
 	                                    <tbody>
