@@ -105,7 +105,7 @@
 	              <div class="white-box">
 		            	<div class="table-responsive">
 		            	
-	                                <table class="table table-bordered table-fixed">
+	                                <table class="table table-bordered ">
 	                                    <thead>
 											<tr class="bg-info">
 												<%@thindex = @result.first.keys.index("_user")%>
@@ -116,7 +116,7 @@
 	                                     	</tr>            
 	                                    </thead>
 	                                   
-	                                    <tbody style="font-size: 12px;">
+	                                    <tbody style="font-size: 12px; overflow: auto;">
 	                                    <%@result.each do |row|%> 
 	                                        <tr>
 	                                        		<%@all_keys.each do |key|%>
