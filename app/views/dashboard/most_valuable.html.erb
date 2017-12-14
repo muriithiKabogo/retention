@@ -108,7 +108,8 @@
 	                                <table class="table table-bordered">
 	                                    <thead>
 											<tr class="bg-info">
-												<%@result.first.keys.each do |key|%>
+
+												<%@result.first.keys.rotate(11).each do |key|%>
 		                                     		<th><%=key%></th>
 		                                     		<%@all_keys.push(key)%>
 		                                     	<%end%>
