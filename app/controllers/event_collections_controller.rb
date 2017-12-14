@@ -20,7 +20,7 @@ class EventCollectionsController < ApplicationController
 
 	request = Net::HTTP::Post.new(url)
 	request["read_key"] = current_user.projects.first.readKey
-	request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"2017-12-09\",\"collections\":[\"pageview\"]}"
+	request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\",\"collections\":[\"pageview\"]}"
 
 	response = http.request(request)
   end
