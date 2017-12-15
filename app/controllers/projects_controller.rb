@@ -6,7 +6,7 @@ before_action :authenticate_user!
   def new
     @user = current_user
     if @user.projects.exists?
-      redirect_to  dashboard_most_valuable_url
+      redirect_to  event_collections_index_url
     else
   	   @project = Project.new
     end
