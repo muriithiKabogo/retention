@@ -18,7 +18,7 @@ before_action :authenticate_user!
     	project = project_params[:projectName]
     	website = project_params[:website]
 
-    	trimmed_response = createProject(project).read_body.tr('{}','')
+    	trimmed_response = createProject(project).read_body.tr('{}','')# I have
     	array_response = trimmed_response.split(',')
     	master_key_array = array_response[0].split(':')
     	read_key_array = array_response[1].split(':')
