@@ -34,7 +34,7 @@
 		
 		</div>
 		<div class="col-md-6">	
-			<%= form_with scope: @project, url: projects_create_path,:html=> { class: 'form-horizontal new-lg-form',id: 'projectForm' } ,local: true do |f| %>
+			<%= form_with scope: @project, url: projects_create_path,:html=> { class: 'form-horizontal new-lg-form',id: 'projectForm',:"rakam-event-form" => 'Projects created'} ,local: true do |f| %>
 	                    <div class="form-group ">
 	                        <div class="col-xs-12">
 	                       

@@ -19,7 +19,7 @@
                     <h3 class="box-title m-b-0">Sign In to Admin</h3>
                     <small>Enter your details below</small>
 
-                  <%= form_for(resource, as: resource_name, url: session_path(resource_name),:html=> { class: 'form-horizontal new-lg-form',id: 'loginform' }) do |f| %> 
+                  <%= form_for(resource, as: resource_name, url: session_path(resource_name),:html=> { class: 'form-horizontal new-lg-form',id: 'loginform' :"rakam-event-form" => 'Logins'}) do |f| %> 
                   <% if flash[:alert] %>
                   <div class="alert alert-danger" role="alert">
                       <%= flash[:alert] %>
