@@ -21,10 +21,10 @@
 
                   <%= form_for(resource, as: resource_name, url: session_path(resource_name),:html=> { class: 'form-horizontal new-lg-form',id: 'loginform' :"rakam-event-form" => 'Logins'}) do |f| %> 
                   <% if flash[:alert] %>
-                  <div class="alert alert-danger" role="alert">
-                      <%= flash[:alert] %>
-                  </div>
-                  <% end %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= flash[:alert] %>
+                    </div>
+                  <%end%>
                     <div class="form-group ">
                         <div class="col-xs-12">
                        
@@ -41,7 +41,7 @@
       
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
-                            <%= f.submit "Log in",class: 'actions btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light' %>
+                            <%= f.submit "Log in", class: 'actions btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light' %>
                         </div>
                     </div>
                     <%end%>
