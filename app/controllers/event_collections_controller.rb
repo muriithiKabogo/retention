@@ -5,6 +5,7 @@ class EventCollectionsController < ApplicationController
   before_action :authenticate_user!
   
   def index
+    @user = current_user
   	string = collection.read_body
   	parsed = JSON.parse(string)
 	  @events = parsed["result"]
