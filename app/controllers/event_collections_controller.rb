@@ -9,6 +9,7 @@ class EventCollectionsController < ApplicationController
   	string = collection.read_body
   	parsed = JSON.parse(string)
 	  @events = parsed["result"]
+    puts @events.class
   end
 
   private
@@ -24,7 +25,7 @@ class EventCollectionsController < ApplicationController
 	request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\",\"collections\":[\"pageview\"]}"
 
 	response = http.request(request)
-  
+
   end
 
 end
