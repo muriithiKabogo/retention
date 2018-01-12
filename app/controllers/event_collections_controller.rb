@@ -6,14 +6,9 @@ class EventCollectionsController < ApplicationController
   
   def index
     @user = current_user
-    puts @user
   	string = collection.read_body
-    puts string
   	parsed = JSON.parse(string)
-
-    puts parsed
 	  @events = parsed["result"]
-    puts @events.class
   end
 
   private
