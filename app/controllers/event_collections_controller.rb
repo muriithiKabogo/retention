@@ -19,7 +19,7 @@ class EventCollectionsController < ApplicationController
   private
 
   def collection	
-  url = URI("https://nestmetricai.herokuapp.com//event-explorer/statistics")
+  url = URI("https://nestmetricai.herokuapp.com///event-explorer/statistics")
   http = Net::HTTP.new(url.host, url.port)
 	http.use_ssl = true
 	http.verify_mode = OpenSSL::SSL::VERIFY_NONE
