@@ -20,7 +20,8 @@ class EventCollectionsController < ApplicationController
 	http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 	request = Net::HTTP::Post.new(url)
-	request["read_key"] = user.projects.first.readKey.to_s
+  read_key = user.projects.first.readKey
+	request["read_key"] = read_key
 	request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\",\"collections\":[\"pageview\"]}"
 
 	response = http.request(request)
