@@ -24,6 +24,7 @@ class EventCollectionsController < ApplicationController
 	request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\",\"collections\":[\"pageview\"]}"
 
 	response = http.request(request)
+  
   end
 
 end
