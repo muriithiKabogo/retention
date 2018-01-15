@@ -27,9 +27,9 @@
 	                                        	<%eventLength.times do |count|%>
 	                                        <tr>
 	                                        		<%@count = @count*1%>
-		                                            <td><a href="/dashboard/most_valuable" rakam-event-track="Click to view events", rakam-event-properties='{"webpage": "/dashboard/most_valuable"}'><%=@events[1][@count]%></a></td>
+		                                            <td><a href="/dashboard/most_valuable" rakam-event-track="Click to view events", rakam-event-properties='{"webpage": "/dashboard/most_valuable"}'><%=@events[count][@count]%></a></td>
 		                                            <%@count = @count+1%>
-		                                            <td><span class="text-muted"><%=@events[0][@count]%></span></td>
+		                                            <td><span class="text-muted"><%=@events[count][@count]%></span></td>
 		                                           
 	                                        </tr> 
 										<%end%> 
