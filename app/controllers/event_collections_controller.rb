@@ -21,10 +21,6 @@ class EventCollectionsController < ApplicationController
   	parsed = JSON.parse(string)
 	  @events = parsed["result"]
     @count = 0
-    puts @string
-    puts @parsed
-    puts @events
-    puts @events.class
   end
 
   private
