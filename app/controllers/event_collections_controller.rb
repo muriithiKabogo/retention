@@ -14,7 +14,7 @@ class EventCollectionsController < ApplicationController
 
     request = Net::HTTP::Post.new(url) 
     request["read_key"] = "92prrm43kth6avmd5e8aiq1avi2h1ucg2nig4ja7ondhabmpufmft7gqagov1g9i"
-    request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\",\"collections\":[\"\"]}"
+    request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\"}"
     response = http.request(request)
 
   	string = response.read_body
