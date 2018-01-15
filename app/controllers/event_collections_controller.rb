@@ -20,7 +20,11 @@ class EventCollectionsController < ApplicationController
   	string = response.read_body
   	parsed = JSON.parse(string)
 	  @events = parsed["result"]
-    puts @events.length
+    @events.each do |event|
+      puts event
+      puts "the index is"
+      puts @evens.index(event)
+    end
     @count = 0
   end
 
