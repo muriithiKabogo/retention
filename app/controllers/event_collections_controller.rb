@@ -23,7 +23,7 @@ class EventCollectionsController < ApplicationController
     @events.each do |event|
       puts event
       puts "the index is"
-      puts @evens.index(event)
+      puts @events.index(event)
     end
     @count = 0
   end
