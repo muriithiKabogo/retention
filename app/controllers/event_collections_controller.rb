@@ -7,7 +7,17 @@ class EventCollectionsController < ApplicationController
   
   def index
     @user = current_user
-  	string = collection(@user).read_body
+    url = URI("https://nestmetricai.herokuapp.com///event-explorer/statistics")
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+    request = Net::HTTP::Post.new(url) 
+    request["read_key"] = @user.projects.first.readKey
+    request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\",\"collections\":[\"pageview\"]}"
+    response = http.request(request)
+
+  	string = response.read_body
   	parsed = JSON.parse(string)
 	  @events = parsed["result"]
   end
@@ -15,16 +25,7 @@ class EventCollectionsController < ApplicationController
   private
 
   def collection(user)	
-  url = URI("https://nestmetricai.herokuapp.com///event-explorer/statistics")
-  http = Net::HTTP.new(url.host, url.port)
-	http.use_ssl = true
-	http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-	request = Net::HTTP::Post.new(url) 
-	request["read_key"] = user.projects.first.readKey
-	request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\",\"collections\":[\"pageview\"]}"
-	response = http.request(request)
-
+  
   end
 
 end
