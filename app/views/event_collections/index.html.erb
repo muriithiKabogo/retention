@@ -23,16 +23,16 @@
 	                                        </tr>
 	                                    </thead>
 	                                    <tbody>
-	                                        <tr>
-	                                        	<%eventLength = @events.length/2 %>
+	                                    <%eventLength = @events.length/2 %>
 	                                        	<%eventLength.times do |count|%>
+	                                        <tr>
 	                                        		<%@count = @count*1%>
 		                                            <td><a href="/dashboard/most_valuable" rakam-event-track="Click to view events", rakam-event-properties='{"webpage": "/dashboard/most_valuable"}'><%=@events[0][@count]%></a></td>
 		                                            <%@count = @count+1%>
 		                                            <td><span class="text-muted"><%=@events[0][@count]%></span></td>
-		                                         <%end%>   
+		                                           
 	                                        </tr> 
-
+										<%end%> 
 	                                    </tbody>
 	                                </table>
 	                      	</div>
