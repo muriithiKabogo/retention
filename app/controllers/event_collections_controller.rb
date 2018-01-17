@@ -20,6 +20,10 @@ class EventCollectionsController < ApplicationController
   	string = response.read_body
   	parsed = JSON.parse(string)
 	  @events = parsed["result"]
+
+    @events.each do |event|
+      puts event
+    end
   end
 
   private
