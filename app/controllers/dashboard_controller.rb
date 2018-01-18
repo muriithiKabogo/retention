@@ -6,7 +6,7 @@ class DashboardController < ApplicationController
 
   def create
     @user = current_user
-    field = params[:field]
+    field = params[:projectName]
     puts "the field posted is #{field}"
     @project = @user.projects.first
     @project_name = @project.projectName
