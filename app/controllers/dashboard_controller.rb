@@ -4,6 +4,10 @@ class DashboardController < ApplicationController
   	
   end
 
+  def create
+    
+  end
+
   def one
     @user = current_user
     @project = @user.projects.first

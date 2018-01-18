@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   get 'dashboard/new'
+  post 'dashboard/create'
   get 'dashboard/one'
   get 'dashboard/churn'
-  get 'dashboard/most_valuable'
+  post'dashboard/most_valuable'
   get 'dashboard/likely_convert'
   get 'dashboard/churn_onboarding'
   get 'dashboard/campaign'
