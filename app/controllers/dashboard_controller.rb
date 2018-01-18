@@ -31,6 +31,14 @@ class DashboardController < ApplicationController
 
   def most_valuable
     @user = current_user
+    field = params[:projectName]
+    puts "the field posted is #{field}"
+    @project = @user.projects.first
+    @project_name = @project.projectName
+    @all_keys = []
+    ActiveRecord::Base.connection.schema_search_path = "#{@project_name},public"
+    puts ActiveRecord::Base.connection.schema_search_path
+    @result = ActiveRecord::Base.connection.execute("select * from #{field}")
   end
   def likely_convert
 
