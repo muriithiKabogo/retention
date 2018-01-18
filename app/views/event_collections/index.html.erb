@@ -26,7 +26,7 @@
 	                                    
 	                                     <%@events.each do |event|%>
 	                                        <tr>
-<td><%=link_to @events[@events.index(event)][0],:id => 'my_events',dashboard_create_path,:method=>'post',params: {projectName: @events[@events.index(event)][0]},:onclick=>"document.getElementById('my_events').submit()"%></td>
+<td><%= link_to @events[@events.index(event)][0], :id => 'my_events',dashboard_create_path,:method=>'post',params: {projectName: @events[@events.index(event)][0]},:onclick=>"document.getElementById(my_events).submit()"%></td>
 		                                            
 		                                            <td><span class="text-muted"><%=@events[@events.index(event)][1]%></span></td>         
 	                                        </tr> 
