@@ -30,7 +30,7 @@ class DashboardController < ApplicationController
   end
 
   def most_valuable
-    
+    @user = current_user
   end
   def likely_convert
 
