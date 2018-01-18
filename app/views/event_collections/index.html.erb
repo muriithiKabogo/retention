@@ -26,7 +26,7 @@
 	                                    
 	                                        	<%@events.each do |event|%>
 	                                        <tr>
-		                                            <td><a href="/dashboard/most_valuable" rakam-event-track="Click to view events", rakam-event-properties='{"webpage": "/dashboard/most_valuable"}'><%=@events[@events.index(event)][0]%></a></td>
+		                                            <td><%=link_to '@events[@events.index(event)][0]'%></td>
 		                                            
 		                                            <td><span class="text-muted"><%=@events[@events.index(event)][1]%></span></td>         
 	                                        </tr> 
