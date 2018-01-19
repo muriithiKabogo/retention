@@ -7,7 +7,7 @@ class DashboardController < ApplicationController
   def create
     @user = current_user
     table = params[:projectName]
-    puts "the table posted is \"#{"table"}\""
+    puts "the table posted is #{"table"}"
     @project = @user.projects.first
     @project_name = @project.projectName
     @all_keys = []
