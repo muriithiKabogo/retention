@@ -28,7 +28,7 @@ class DashboardController < ApplicationController
     @all_keys = []
     ActiveRecord::Base.connection.schema_search_path = "#{@project_name},public"
     puts ActiveRecord::Base.connection.schema_search_path
-    @result = ActiveRecord::Base.connection.execute("select * from #{field}")
+    @result = ActiveRecord::Base.connection.execute("select * from \"#{field}\"")
     #this code needs to be re-written
   end
   def likely_convert
