@@ -6,14 +6,14 @@ class DashboardController < ApplicationController
 
   def create
     @user = current_user
-    field = params[:projectName]
-    puts "the field posted is #{field}"
+    table = params[:projectName]
+    puts "the field posted is #{table}"
     @project = @user.projects.first
     @project_name = @project.projectName
     @all_keys = []
     ActiveRecord::Base.connection.schema_search_path = "#{@project_name},public"
     puts ActiveRecord::Base.connection.schema_search_path
-    @result = ActiveRecord::Base.connection.execute("select * from #{field}")
+    @result = ActiveRecord::Base.connection.execute("select * from #{'table'}")
     redirect_to dashboard_most_valuable_path
     #this code needs to be re-written
   end
