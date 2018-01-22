@@ -22,6 +22,11 @@ class DashboardController < ApplicationController
   def most_valuable
     @user = current_user
     @table = params[:projectName]
+    
+    if @table.empty?
+      @table = cookies[:table]
+    end
+
     puts "the field posted is \"#{@table}\""
     @project = @user.projects.first
     @project_name = @project.projectName
