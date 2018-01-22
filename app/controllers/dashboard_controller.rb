@@ -23,8 +23,8 @@ class DashboardController < ApplicationController
     @user = current_user
 
     @table = params[:projectName]
-    @table.class
-    if @table.empty?
+    puts @table.class
+    if @table.nil?
       @table = cookies[:table]
     end
 
