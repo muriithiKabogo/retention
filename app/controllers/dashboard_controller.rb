@@ -22,8 +22,8 @@ class DashboardController < ApplicationController
   def most_valuable
     @user = current_user
 
-    String @table = params[:projectName]
-    
+    @table = params[:projectName]
+    @table.class
     if @table.empty?
       @table = cookies[:table]
     end
