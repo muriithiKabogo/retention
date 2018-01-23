@@ -108,7 +108,7 @@ $(document).ready(function(){
 			</div>
 <pre class="prettyprint lang-js" >&lt;script&gt;
 (function(e,t){var r=e.rakam||{};var n=t.createElement("script");n.type="text/javascript";
-n.async=true;n.src="https://d2f7xo8n6nlhxf.cloudfront.net/rakam.min.js";
+n.async=true;n.src="https://d2f7xo8n6nlhxf.cloudfront.net/rakam.beta.min.js";
 n.onload=function(){e.rakam.runQueuedFunctions()};var a=t.getElementsByTagName("script")[0];
 a.parentNode.insertBefore(n,a);function s(e,t){e[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
 return this}}var i=function(){this._q=[];return this};var o=["set","setOnce","increment","unset"];
@@ -116,15 +116,15 @@ for(var c=0;c&lt;o.length;c++){s(i.prototype,o[c])}r.User=i;r._q=[];var u=["init
 for(var m=0;m&lt;u.length;m++){s(r,u[m])}e.rakam=r})(window,document);
 
 rakam.init("<%=@write_key%>", "user_id", { 
-apiEndpoint:"nestmetricai.herokuapp.com", 
-saveEvents: true,
-batchEvents: true,
-eventUploadThreshold: 30,
-eventUploadPeriodMillis: 30000,
+apiEndpoint:"nestmetricai.herokuapp.com/", 
 includeUtm: true, 
 trackClicks: true, 
 trackForms: true, 
-includeReferrer: true 
+includeReferrer: true,
+saveEvents: true,
+batchEvents: true,
+eventUploadThreshold: 30,
+eventUploadPeriodMillis: 30000
 }, function() {
 var e = document.documentElement, g = document.getElementsByTagName('body')[0],
 x = window.innerWidth || e.clientWidth || g.clientWidth,
