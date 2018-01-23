@@ -14,7 +14,7 @@ class EventCollectionsController < ApplicationController
 
     request = Net::HTTP::Post.new(url) 
     puts "The read key is #{@user.projects.first.readKey}"
-    request["read_key"] = @user.projects.first.readKey 
+    request["read_key"] = "#{@user.projects.first.readKey}"
     request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\"}"
     response = http.request(request)
 
