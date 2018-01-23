@@ -20,19 +20,20 @@
                     <small>Enter your details below</small>
 
                   <%= form_for(resource, as: resource_name, url: session_path(resource_name),:html=> { class: 'form-horizontal new-lg-form',id: 'loginform' ,:"rakam-event-form" => 'Logins'}) do |f| %> 
-                  <% if flash[:alert] %>
-                    <div class="alert alert-warning" role="alert">
-                        <%= flash[:alert] %>
-                    </div>
-                  <%elsif flash[:notice]%>
+                  <% if flash[:notice] %>
                     <div class="alert alert-success" role="alert">
                         <%= flash[:notice] %>
+                    </div>
+                  <%elsif flash[:alert]%>
+                    <div class="alert alert-warning" role="alert">
+                        <%= flash[:alert] %>
                     </div>
                   <%elsif flash[:error]%>
                      <div class="alert alert-danger" role="alert">
                         <%= flash[:error] %>
                     </div>      
                   <%end%>
+
                     <div class="form-group ">
                         <div class="col-xs-12">
                        
