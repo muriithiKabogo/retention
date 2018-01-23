@@ -22,7 +22,7 @@ class EventCollectionsController < ApplicationController
   	parsed = JSON.parse(string)
 	  @events = parsed["result"]
 
-    puts "The key is #{@user.projects.first.readKey.class}"
+    puts "The key is #{@events.class}"
   end
 
   private
