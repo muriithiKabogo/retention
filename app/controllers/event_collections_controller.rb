@@ -14,16 +14,14 @@ class EventCollectionsController < ApplicationController
 
     request = Net::HTTP::Post.new(url) 
     request["read_key"] =  @user.projects.first.readKey
-    puts "the readKey is"
-    puts request["read_key"]
     request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\"}"
-    puts "this is the request body"
-    puts request.read_body
     response = http.request(request)
 
   	string = response.read_body
+    puts string
   	parsed = JSON.parse(string)
 	  @events = parsed["result"]
+
 
   end
 
