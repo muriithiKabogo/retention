@@ -17,6 +17,8 @@ class EventCollectionsController < ApplicationController
     puts "the readKey is"
     puts request["read_key"]
     request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\"}"
+    puts "this is the request body"
+    puts request.body
     response = http.request(request)
 
   	string = response.read_body
