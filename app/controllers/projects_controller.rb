@@ -5,12 +5,11 @@ class ProjectsController < ApplicationController
 before_action :authenticate_user!
   def new
     @user = current_user
-    # if @user.projects.exists?
-    #   redirect_to  event_collections_index_url
-    # else
-  	 #   @project = Project.new
-    # end
-    @project = Project.new
+    if @user.projects.exists?
+      redirect_to  event_collections_index_url
+    else
+  	   @project = Project.new
+    end
   end
 
   def create
