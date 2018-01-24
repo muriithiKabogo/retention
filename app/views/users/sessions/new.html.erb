@@ -16,6 +16,20 @@
       </div>
       <div class="new-login-box">
                 <div class="white-box">
+                    <% if flash[:notice] %>
+                    <div class="alert alert-success" role="alert">
+                        <%= flash[:notice] %>
+                    </div>
+                  <%elsif flash[:alert]%>
+                    <div class="alert alert-warning" role="alert">
+                        <%= flash[:alert] %>
+                    </div>
+                  <%elsif flash[:error]%>
+                     <div class="alert alert-danger" role="alert">
+                        <%= flash[:error] %>
+                    </div>      
+                  <%end%>
+                  
                     <h3 class="box-title m-b-0">Sign In to Admin</h3>
                     <small>Enter your details below</small>
 
