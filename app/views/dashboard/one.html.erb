@@ -115,7 +115,7 @@ return this}}var i=function(){this._q=[];return this};var o=["set","setOnce","in
 for(var c=0;c&lt;o.length;c++){s(i.prototype,o[c])}r.User=i;r._q=[];var u=["init","logEvent","logInlinedEvent","setUserId","getUserId","getDeviceId","setSuperProperties","setOptOut","setVersionName","setDomain","setUserProperties","setDeviceId","onload","onEvent","getTimeOnPreviousPage","getTimeOnPage","startTimer","isReturningUser"];
 for(var m=0;m&lt;u.length;m++){s(r,u[m])}e.rakam=r})(window,document);
 
-rakam.init(<%=@write_key%>, "user_id", { 
+rakam.init("<%=@write_key%>", "user_id", { 
 apiEndpoint:"nestmetricai.herokuapp.com/", 
 includeUtm: true, 
 trackClicks: true, 
