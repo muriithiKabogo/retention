@@ -37,9 +37,6 @@ class DashboardController < ApplicationController
     @result = ActiveRecord::Base.connection.execute("select * from \"#{@table}\"").values
     puts "the class is #{@result.class}"
     puts @result.length
-    @result.each do|result|
-      puts result
-    end
     user = User.all
     puts "the class is #{user.class}"
     #@result.(page: params[:page],per_page: 10)
