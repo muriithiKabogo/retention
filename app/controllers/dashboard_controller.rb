@@ -40,7 +40,6 @@ class DashboardController < ApplicationController
     @result.each do|result|
       puts result
     end
-    puts @result.paginate
     user = User.all
     puts "the class is #{user.class}"
     #@result.(page: params[:page],per_page: 10)
