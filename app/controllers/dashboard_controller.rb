@@ -34,7 +34,7 @@ class DashboardController < ApplicationController
     @all_keys = []
     ActiveRecord::Base.connection.schema_search_path = "#{@project_name},public"
     puts ActiveRecord::Base.connection.schema_search_path
-    @result = ActiveRecord::Base.connection.execute("select * from \"#{@table}\"")
+    @result = ActiveRecord::Base.connection.execute("select * from \"#{@table}\"").values
     puts "the class is #{@result.class}"
     user = User.all
     puts "the class is #{user.class}"
