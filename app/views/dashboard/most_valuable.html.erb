@@ -119,11 +119,11 @@
 	                                    <tbody style="font-size: 12px;">
 	                                    <%@result.each do |row|%> 
 	                                        <tr>
-	                                        		
+	                                        		<%row.each do |r|%>
 	                                            		<td>
-	                                            			<%=row%>
+	                                            		<%=r%>
 	                                            		</td> 
-	                                            	
+	                                            	<%end%>
 	                                        </tr>
 	                                     <%end%>  
 	                                    </tbody>
