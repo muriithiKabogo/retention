@@ -119,7 +119,7 @@
 		                                     	<%end%>
 	                                     	</tr>            
 	                                    </thead>
-	                                   
+	                                   <%= will_paginate %>
 	                                    <tbody style="font-size: 12px;">
 	                                    <%@result.each do |row|%> 
 	                                        <tr>
@@ -131,7 +131,8 @@
 	                                        </tr>
 	                                     <%end%>  
 	                                    </tbody>
-	                                    
+	                                    <%= will_paginate %>
+
 	                                </table>
 	                               
 	                        		
