@@ -36,6 +36,8 @@ class DashboardController < ApplicationController
     puts ActiveRecord::Base.connection.schema_search_path
     @result = ActiveRecord::Base.connection.execute("select * from \"#{@table}\"")
     puts "the class is #{@result.class}"
+    user = User.all
+    puts "the class is #{user.class}"
     #@result.(page: params[:page],per_page: 10)
     #this code needs to be re-written
   end
