@@ -112,22 +112,18 @@
 	                                <table class="table table-bordered ">
 	                                    <thead>
 											<tr class="bg-info">
-												<%@thindex = @result.first.keys.index("_user")%>
-												<%@result.first.keys.rotate(@thindex).each do |key|%>
-		                                     		<th><%=key%></th>
-		                                     		<%@all_keys.push(key)%>
-		                                     	<%end%>
+												
 	                                     	</tr>            
 	                                    </thead>
 	                                   
 	                                    <tbody style="font-size: 12px;">
 	                                    <%@result.each do |row|%> 
 	                                        <tr>
-	                                        		<%@all_keys.each do |key|%>
+	                                        		
 	                                            		<td>
-	                                            			<%=row[key]%>
+	                                            			<%=row%>
 	                                            		</td> 
-	                                            	<%end%>	 
+	                                            	
 	                                        </tr>
 	                                     <%end%>  
 	                                    </tbody>
