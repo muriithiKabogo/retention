@@ -35,7 +35,7 @@ class DashboardController < ApplicationController
     ActiveRecord::Base.connection.schema_search_path = "#{@project_name},public"
     puts ActiveRecord::Base.connection.schema_search_path
     @result = ActiveRecord::Base.connection.execute("select * from \"#{@table}\"")
-    puts @result.(page: params[:page],per_page: 10)
+    puts "the result is #{@result.(page: params[:page],per_page: 10)}" 
     #this code needs to be re-written
   end
   def likely_convert
