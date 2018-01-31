@@ -1,11 +1,11 @@
 class DashboardController < ApplicationController
   before_action :authenticate_user!
   def new
-  	 @user = current_user
+  	 
   end
 
   def create
-     @user = current_user
+     
   end
 
   def one
@@ -81,7 +81,7 @@ class DashboardController < ApplicationController
   def segment_empty
      @user = current_user
   end
-    @user = current_user
+    
   def new_segment_emptystate
     @user = current_user
   end
