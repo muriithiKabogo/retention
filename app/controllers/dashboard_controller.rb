@@ -1,11 +1,11 @@
 class DashboardController < ApplicationController
   before_action :authenticate_user!
   def new
-  	
+  	 @user = current_user
   end
 
   def create
-    
+     @user = current_user
   end
 
   def one
@@ -16,7 +16,7 @@ class DashboardController < ApplicationController
   end
 
   def churn
-  	
+  	 @user = current_user
   end
 
   def most_valuable
@@ -35,62 +35,63 @@ class DashboardController < ApplicationController
     ActiveRecord::Base.connection.schema_search_path = "#{@project_name},public"
     puts ActiveRecord::Base.connection.schema_search_path
     @result = ActiveRecord::Base.connection.execute("select * from \"#{@table}\"")
-    #@result.(page: params[:page],per_page: 10)
+    #I need to paginate
     #this code needs to be re-written
   end
   def likely_convert
-
+     @user = current_user
   end
 
   def churn_onboarding
-  	
+  	 @user = current_user
   end
 
   def campaign
-
+       @user = current_user
   end
 
   def explore
-    
+     @user = current_user
   end
 
   def segment
-    
+     @user = current_user
   end
 
   def create_segment
-    
+     @user = current_user
   end
 
   def compose_segmented
-
+     @user = current_user
   end
 
   def all_segments
-    
+    @user = current_user
   end
 
   def settings
+     @user = current_user
   end
 
   def emptystate
-    
+    @user = current_user
   end
 
   def segment_empty
-
+     @user = current_user
   end
-
+    @user = current_user
   def new_segment_emptystate
-    
+    @user = current_user
   end
 
   def campaign_segment
-    
+    @user = current_user
   end
 
   def customer
-    
+    @user = current_user
   end
 
   
