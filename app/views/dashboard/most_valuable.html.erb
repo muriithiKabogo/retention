@@ -120,6 +120,11 @@
 </div>
 <script>
   $('#builder').queryBuilder({
-    
-  });
+    filters: [
+        {id: 'firstname', type: 'string'},
+        {id: 'surname', type: 'string'},
+        {id: 'age', type: 'integer'}
+      ],
+      lang_code: 'en' // You can change this to es
+    });
 </script>
