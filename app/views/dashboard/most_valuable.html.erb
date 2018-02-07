@@ -65,7 +65,12 @@
 
 						</div><br>FILTER
 						<div class="row">
-						    
+						     <%= form_tag users_path, id: 'users_search', method: :get do %>
+							    <div id="builder"></div>
+							    <%= hidden_field_tag :query_builder_json %>
+							    <br>
+							    <%= submit_tag "Search users" %>
+							  <% end %>
 						</div>
 					</div>
 				</div>				
