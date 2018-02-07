@@ -7,8 +7,7 @@ end
 
 gem 'devise'
 gem "figaro"
-gem 'will_paginate',           '3.1.6'
-gem 'bootstrap-will_paginate', '1.0.0'
+gem 'jquery_query_builder-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use postgresql as the database for Active Record
