@@ -120,11 +120,13 @@
 </div>
 <script>
   var keyLength = '<%=@all_keys.length%>'
+ 
+  for(var i=0;i<=keyLength;i++){
   $('#builder').queryBuilder({
-  	for(var i=0;i<=keyLength;i++){
     filters: [
         {id: '<%=@all_keys[i]%>', type: 'string'}
-      ]},
+      ],
       lang_code: 'en' // You can change this to es
     });
+	}
 </script>
