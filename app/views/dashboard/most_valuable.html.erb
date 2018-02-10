@@ -124,7 +124,7 @@
   for(var i = 0;i <= keyLength;i++){
   $('#builder').queryBuilder({
     filters: [
-        {id: '<%=@all_keys%>', type: 'string'}
+        {id: '<%=@all_keys[0]%>', type: 'string'}
       ],
       lang_code: 'en' // You can change this to es
     });
