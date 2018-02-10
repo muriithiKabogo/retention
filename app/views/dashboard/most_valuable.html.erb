@@ -120,13 +120,11 @@
 </div>
 <script>
 	var array = '<%@all_keys.inspect.html_safe%>';
-	console.log(array)
   $('#builder').queryBuilder({
+  	for(i=0;i<=array.length; i++){
     filters: [
-        {id: 'firstname', type: 'string'},
-        {id: 'surname', type: 'string'},
-        {id: 'age', type: 'integer'}
-      ],
+        {id: array[i]},
+      ]},
       lang_code: 'en' // You can change this to es
     });
 </script>
