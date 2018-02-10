@@ -104,7 +104,7 @@
 	                                    
 	                                </table>
 	                               
-	              <%="all keys is of class #{@all_keys.class}"%>          		
+	                        		
 
 
 	                      	</div>
@@ -125,7 +125,7 @@
   	console.log(i);
   $('#builder').queryBuilder({
     filters: [
-        {id: '<%=@all_keys[0]%>', type: 'string'}
+        {id: '<%=@all_keys[i]%>', type: 'string'}
       ],
       lang_code: 'en' // You can change this to es
     });
