@@ -120,7 +120,7 @@
 </div>
 <script>
   var keyLength = '<%=@all_keys.length%>'
-  var array = @all_keys.to_json
+  var array ='<%=@all_keys.to_json%>'
   for(var i = 0;i <= keyLength;i++){
   	console.log(i);
   $('#builder').queryBuilder({
