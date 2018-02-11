@@ -122,11 +122,11 @@
   var keyLength = '<%=@all_keys.length%>'
   var array ='<%=@all_keys.to_json%>'
   for(var i = 0;i <= keyLength;i++){
-  	console.log(i);
-  	console.log(array[i]);
   $('#builder').queryBuilder({
     filters: [
-        {id: array[i], type: 'string'}
+         {id: 'firstname', type: 'string'},
+        {id: 'surname', type: 'string'},
+        {id: 'age', type: 'integer'}
       ],
       lang_code: 'en' // You can change this to es
     });
