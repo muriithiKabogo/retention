@@ -123,6 +123,7 @@
   var array ='<%=@all_keys.to_json%>'
   for(var i = 0;i <= keyLength;i++){
   	console.log(i);
+  	console.log(array[i]);
   $('#builder').queryBuilder({
     filters: [
         {id: array[i], type: 'string'}
