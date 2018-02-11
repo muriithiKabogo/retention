@@ -66,7 +66,7 @@
 						</div><br>FILTER
 						<div class="row">
 							<div class="col-sm-3">
-								<%= select_tag(:state, options_for_select(@result), prompt: "Please Select") %>
+								<%= select_tag(:state, options_for_select(@result), prompt: "Please Select"),class: "form-control custom-select"  %>
 							</div>
 							<div class="col-sm-3">
 								<select class="form-control custom-select mydatepicker">
