@@ -120,12 +120,12 @@
 </div>
 <script>
   var keyLength = '<%=@all_keys.length%>'
- 
+  var array = @all_keys.to_json
   for(var i = 0;i <= keyLength;i++){
   	console.log(i);
   $('#builder').queryBuilder({
     filters: [
-        {id: '<%=@all_keys[i]%>', type: 'string'}
+        {id: arr[i], type: 'string'}
       ],
       lang_code: 'en' // You can change this to es
     });
