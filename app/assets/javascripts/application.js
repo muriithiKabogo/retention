@@ -12,6 +12,9 @@
 //
 //= require rails-ujs
 //= require jquery.min
+//= require jquery.extendext
+//= require doT
+//= require query-builder
 //= require turbolinks
 //= require bootstrap-toggle.min
 //= require bootstrap.min
