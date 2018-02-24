@@ -46,10 +46,20 @@
 	       
 	        <%while i <= row%>
 	        	 <div class="row">
-		            <%=@events[x][0]%><%=@events[x][1]%>
+	        	 	<div class="col-lg-6 col-sm-6 col-xs-12">
+	        	 		<div class="white-box">
+		            		<%=@events[x][0]%><%=@events[x][1]%>
+		            	</div>
+		            </div>
+
 		            <%if @events[y].nil? == false%>
-		            	<%=@events[y][0]%><%=@events[y][1]%>
+			            <div class="col-lg-6 col-sm-6 col-xs-12">
+			            	<div class="white-box">
+			            		<%=@events[y][0]%><%=@events[y][1]%>
+			            	<div class="white-box">
+			            </div>
 		            <%end%>
+
 	            </div>
 	            <%x = x+2%>
 	            <%y = y+2%>
