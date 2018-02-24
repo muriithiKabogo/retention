@@ -20,7 +20,8 @@ class EventCollectionsController < ApplicationController
   	string = response.read_body
   	parsed = JSON.parse(string)
 	  @events = parsed["result"]
-
+    puts @events
+    puts @events.class
 
   end
 
