@@ -53,6 +53,7 @@
 	                                <li></li>
 	                                <li class="text-right"><span class="counter" style="color: #042ccc;"><%=@events[x][1]%></span></li>
 	                            </ul> 
+	                            <%= button_to @events[x][0],dashboard_most_valuable_path,:method=>'post',params: {projectName: "#{@events[@events.index(event)][0]}"}%>
 		            	</div>
 		            </div>
 
@@ -64,6 +65,7 @@
 	                                <li></li>
 	                                <li class="text-right"><span class="counter" style="color: #042ccc;"><%=@events[y][1]%></span></li>
 	                            </ul> 
+								<%= button_to @events[y][0],:method=>'post',params: {projectName: "#{@events[@events.index(event)][0]}"}%>
 			            	</div>
 			            </div>
 		            <%end%>
