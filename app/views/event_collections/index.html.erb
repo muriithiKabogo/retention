@@ -65,7 +65,7 @@
 	                                <li></li>
 	                                <li class="text-right"><span class="counter" style="color: #042ccc;"><%=@events[y][1]%></span></li>
 	                            </ul> 
-								<%= button_to @events[y][0],:method=>'post',params: {projectName: "#{@events[y][0]}"},class: "pull-right btn btn-xs btn-info"%>
+					<%= button_to @events[y][0],:method=>'post',params: {projectName: "#{@events[y][0]}"},class: "pull-right btn btn-xs btn-info"%>
 			            	</div>
 			            </div>
 		            <%end%>
