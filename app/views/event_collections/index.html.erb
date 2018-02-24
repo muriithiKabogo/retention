@@ -46,7 +46,9 @@
 	        <div class="row">
 	        <%while i <= row%>
 	            <%=@events[x][1]%>
-	            <%=@events[y].nil?%>
+	            <%if @events[y].nil? == false%>
+	            <%=@events[y][1]%>
+	            <%end%>
 	            <br>
 	            <%x = x+2%>
 	            <%y = y+2%>
