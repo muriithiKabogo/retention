@@ -30,26 +30,25 @@
 	            </div>
 	            <!-- /.col-lg-12 -->
 	        </div>
-	        
+	        <% if flash[:notice] && @user.sign_in_count<=1%>
+                    <div class="alert alert-success" role="alert">
+                        <%= flash[:notice] %>
+                    </div>
+            <%end%>
 	        <!-- ============================================================== -->
+	        <%i=1%>
+	        <%x=0%>
+	        <%y=1%>
+	        <%row = @events.length/2.0%>
+	        <%row = row.round(-0.5)%>
+
 	        <div class="row">
-	            <div class="col-lg-12 col-sm-12 col-xs-12">
-	                <div class="row">
-	             
-	                    <div class="col-lg-6 col-sm-6 col-xs-12">
-	                        <div class="white-box">
-	                            <h3 class="box-title">Users likely to churn</h3>                    
-                                 <label>Established</label>
-	                            <ul class="list-inline m-t-30 p-t-10 two-part">
-	                                <li></li>
-	                                <li class="text-right"><span class="counter" style="color: #042ccc;">70</span></li>
-	                            </ul> 
-								 <a href="/dashboard/churn" class="pull-right btn btn-xs btn-info">View List</a>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	            
+	        <%while i <= row%>
+	            <%=@events[x],@events[y]%>
+	            <%x = x+2%>
+	            <%y = y+2%>
+	            <%i = i+1%>
+	          <%end%>
 	        </div>        
      <!-- /.row -->      
 	    </div>
