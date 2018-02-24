@@ -39,14 +39,13 @@
 	        <%i=1%>
 	        <%x=0%>
 	        <%y=1%>
-	        <%=@events.class%>
 	        <%row = @events.length/2.0%>
 	        <%row = row.round(-0.5)%>
 
 	        <div class="row">
 	        <%while i <= row%>
-	            <%=@events[x]%>
-	            <%=@events[y]%><br>
+	            <%=@events[x][0]%> <%=@events[x][1]%>
+	            <%=@events[y][0]%> <%=@events[y][1]<br>
 	            <%x = x+2%>
 	            <%y = y+2%>
 	            <%i = i+1%>
