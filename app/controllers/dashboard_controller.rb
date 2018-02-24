@@ -38,6 +38,7 @@ class DashboardController < ApplicationController
     #I need to paginate
     #this code needs to be re-written
   end
+  
   def likely_convert
      @user = current_user
   end
