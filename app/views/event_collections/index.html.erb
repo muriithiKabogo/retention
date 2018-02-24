@@ -48,14 +48,16 @@
 	        	 <div class="row">
 	        	 	<div class="col-lg-6 col-sm-6 col-xs-12">
 	        	 		<div class="white-box">
-		            		<%=@events[x][0]%><%=@events[x][1]%>
+	        	 			<h3 class="box-title"><%=@events[x][0]%></h3>
+		            		<%=@events[x][1]%>
 		            	</div>
 		            </div>
 
 		            <%if @events[y].nil? == false%>
 			            <div class="col-lg-6 col-sm-6 col-xs-12">
 			            	<div class="white-box">
-			            		<%=@events[y][0]%><%=@events[y][1]%>
+			            	 <h3 class="box-title"><%=@events[y][0]%></h3> 
+			           <%=@events[y][1]%>
 			            	</div>
 			            </div>
 		            <%end%>
