@@ -21,7 +21,6 @@ $( document ).ready(function() {
           xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
         },
         success:function(event_poperties) {
-          // console.log(event_poperties);
           resetBuilder();
           makeBuilder(event_poperties);
         },
@@ -73,7 +72,7 @@ $( document ).ready(function() {
       item["type"] =  field_type;
       filters.push(item);
     }
-    console.log(filters);
+    // console.log(filters);
     $('#query-builder').queryBuilder({
       filters: filters,
     });
@@ -84,10 +83,11 @@ $( document ).ready(function() {
     var rules = $('#query-builder').queryBuilder('getRules');
     if (rules != null) {
       var result = $('#query-builder').queryBuilder('getSQL', false);
-      console.log(result.sql);
+      // console.log(result.sql);
       sql += ' where ' + result.sql;
     }
-    console.log(sql);
+    // console.log(sql);
+    $('button.search-sql').prop('disabled', true);
     $.ajax({
       type: 'post',
       data: { sql: sql},
@@ -97,8 +97,10 @@ $( document ).ready(function() {
       },
       success:function(data_html) {
         $('#search-result').html(data_html);
+        $('button.search-sql').prop('disabled', false);
       },
       error:function(xhr, ajaxOptions, thrownError) {
+        $('button.search-sql').prop('disabled', false);
         alert('Something went worng, Please try Again.');
       }
     });
