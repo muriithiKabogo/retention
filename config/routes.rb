@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   get 'event_collections/index'
+  get 'projects/analyze'
 
   get 'projects/new'
   post 'projects/create'
+  post 'projects/get_event_poperties'
+  post 'projects/search'
 
   devise_for :users
   get 'dashboard/new'

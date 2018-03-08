@@ -22,6 +22,7 @@ class EventCollectionsController < ApplicationController
 	  @events = parsed["result"]
     puts @events.length
     puts @events.class
+    puts "===#{response.read_body}=="
 
   end
 

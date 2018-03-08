@@ -23,7 +23,8 @@ default: &default
 
 development:
   <<: *default
-  database: customer_retetion_development
+  database: customer_retetion_production
+  url: 'postgres://xauxxqeijkdozb:aad3139fe02bdd90b3f6c00bab71d31bbd80647a2cb4233b5ad6d1f823dacabd@ec2-54-235-148-19.compute-1.amazonaws.com:5432/d70ji7sa5vtitl '
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

@@ -40,31 +40,31 @@ class DashboardController < ApplicationController
   end
   
   def likely_convert
-     @user = current_user
+    @user = current_user
   end
 
   def churn_onboarding
-  	 @user = current_user
+  	@user = current_user
   end
 
   def campaign
-       @user = current_user
+    @user = current_user
   end
 
   def explore
-     @user = current_user
+    @user = current_user
   end
 
   def segment
-     @user = current_user
+    @user = current_user
   end
 
   def create_segment
-     @user = current_user
+    @user = current_user
   end
 
   def compose_segmented
-     @user = current_user
+    @user = current_user
   end
 
   def all_segments
