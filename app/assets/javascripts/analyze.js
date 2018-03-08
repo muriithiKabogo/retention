@@ -41,10 +41,10 @@ $( document ).ready(function() {
   }
 
   function makeBuilder(event_poperties) {
-    let filters = [];
-    for (let field of event_poperties) {
-      let data_type = field.data_type;
-      let field_type = "string";
+    var filters = [];
+    for (var field of event_poperties) {
+      var data_type = field.data_type;
+      var field_type = "string";
       var item = {
         id: field.column_name,
         name: field.column_name,
