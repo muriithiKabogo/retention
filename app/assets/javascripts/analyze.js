@@ -42,7 +42,8 @@ $( document ).ready(function() {
 
   function makeBuilder(event_poperties) {
     var filters = [];
-    for (var field of event_poperties) {
+    for (var i=0; i < event_poperties.length; i++) {
+      var field = event_poperties[i];
       var data_type = field.data_type;
       var field_type = "string";
       var item = {
