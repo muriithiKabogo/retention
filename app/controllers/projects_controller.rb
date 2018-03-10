@@ -17,8 +17,12 @@ class ProjectsController < ApplicationController
   end
 
   def search
-    project_name = current_user.projects.first.projectName
+    project_name = current_user.projects.first.projectName.downcase
     query = params[:sql]
+    event_name = params[:event_name]
+    # process for column name has a special character
+    query = query.gsub(event_name, "#{project_name}.\"#{event_name}\"")
+    query = query.gsub('$server_time', "\"$server_time\"")
     ActiveRecord::Base.connection.schema_search_path = "#{project_name},public"
     @result = ActiveRecord::Base.connection.execute(query).to_a
     @all_keys = []

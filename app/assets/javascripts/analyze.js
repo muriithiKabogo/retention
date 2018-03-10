@@ -53,7 +53,14 @@ $( document ).ready(function() {
 
       if (data_type.indexOf("time") != -1) {
         field_type = "time";
-        item["input"] = "text";
+        // item["input"] = "date";
+        item["plugin"] = 'datepicker',
+        item["plugin_config"] = {
+          format: 'yyyy/mm/dd',
+          todayBtn: 'linked',
+          todayHighlight: true,
+          autoclose: true
+        };
       } else if (data_type.indexOf("date") != -1) {
         field_type = "date";
         item["plugin"] = 'datepicker',
@@ -91,7 +98,7 @@ $( document ).ready(function() {
     $('button.search-sql').prop('disabled', true);
     $.ajax({
       type: 'post',
-      data: { sql: sql},
+      data: { sql: sql, event_name: getEvent()},
       url: '/projects/search',
       beforeSend: function (xhr) {
         xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
