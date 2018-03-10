@@ -20,7 +20,7 @@ class ProjectsController < ApplicationController
     project_name = current_user.projects.first.projectName
     query = params[:sql]
     ActiveRecord::Base.connection.schema_search_path = "#{project_name},public"
-    @result = ActiveRecord::Base.connection.execute(query)
+    @result = ActiveRecord::Base.connection.execute(query).to_a
     @all_keys = []
     html = render_to_string(:partial => "search_result", layout: false, locals: {result: @result, all_keys: @all_keys})
     respond_to do |format|
