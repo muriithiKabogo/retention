@@ -74,6 +74,9 @@ class ProjectsController < ApplicationController
     ActiveRecord::Base.connection.execute(sql).to_a
   end
 
+
+  # desc: return array of all tables tracking name
+  # @return: array
   def get_events
     url = URI("https://nestmetricai.herokuapp.com///event-explorer/statistics")
     http = Net::HTTP.new(url.host, url.port)

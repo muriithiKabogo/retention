@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
   // Fix for Bootstrap Datepicker
   $('#builder-widgets').on('afterUpdateRuleValue.queryBuilder', function(e, rule) {
     if (rule.filter.plugin === 'datepicker') {
@@ -6,10 +7,13 @@ $( document ).ready(function() {
     }
   });
 
+
+  // get event name
   function getEvent() {
     return $('#selectEvent').val();
   }
 
+  // select event
   function selectEvent() {
     var event = getEvent();
     if (event != undefined && event != '') {
@@ -35,11 +39,13 @@ $( document ).ready(function() {
     selectEvent();
   });
 
+  // recreate builder when user changes event
   function resetBuilder() {
     // $('#query-builder').queryBuilder('reset');
     $('#query-builder').queryBuilder('destroy');
   }
 
+  // init jquery builder from events and event properties
   function makeBuilder(event_poperties) {
     var filters = [];
     for (var i=0; i < event_poperties.length; i++) {
@@ -86,6 +92,7 @@ $( document ).ready(function() {
     });
   }
 
+  // execute search
   $('button.search-sql').click(function(e) {
     var sql = 'select * from ' + getEvent();
     var rules = $('#query-builder').queryBuilder('getRules');
