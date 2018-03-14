@@ -1,86 +1,69 @@
 <%= render 'layouts/header' %>
 <div id="wrapper">
-<!-- ============================================================== -->
-<!-- Topbar header - style you can find in pages.scss -->
-<!-- ============================================================== -->
-	
-	<!-- End Top Navigation -->
-	<!-- ============================================================== -->
-	<!-- Left Sidebar - style you can find in sidebar.scss  -->
-	<!-- ============================================================= -->
-	<%= render 'layouts/navbar' %>
-	<!-- ============================================================== -->
-	<!-- End Left Sidebar -->
-	<!-- ============================================================== -->
-	<!-- ============================================================== -->
-	<!-- Page Content -->
-	<!-- ============================================================== -->
-	<div id="page-wrapper">
-	    <div class="container-fluid">
-	        <div class="row bg-title">
-	            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-					 <h4 class="page-title">All Events Being Tracked</h4>
-	            </div>
-	            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-	                <!-- <a href="#" target="_blank" class="btn btn-info pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">DEMO</a>
-	                 -->
-	                <!-- <a href="/dashboard/emptystate" type="button" class="btn btn-info pull-right">
-									empty state
-									</a> -->
-	            </div>
-	            <!-- /.col-lg-12 -->
-	        </div>
-	        <% if flash[:notice] && @user.sign_in_count<=1%>
-                    <div class="alert alert-success" role="alert">
-                        <%= flash[:notice] %>
-                    </div>
-            <%end%>
-	        <!-- ============================================================== -->
-	        <%i=1%>
-	        <%x=0%>
-	        <%y=1%>
-	       
-	        <%row = @events.length/2.0%>
-	        <%row = row.round(-0.5)%>
-
-	       
-	        <%while i <= row%>
-	        	 <div class="row">
-	        	 	<div class="col-lg-6 col-sm-6 col-xs-12">
-	        	 		<div class="white-box">
-	        	 			<h3 class="box-title"><%=@events[x][0]%></h3>
-	        	 			<ul class="list-inline m-t-30 p-t-10 two-part">
-	                                <li></li>
-	                                <li class="text-right"><span class="counter" style="color: #042ccc;"><%=@events[x][1]%></span></li>
-	                            </ul> 
-	                            <%= button_to "View List",dashboard_most_valuable_path,:method=>'post',params: {projectName: "#{@events[x][0]}"},class: "pull-right btn btn-xs btn-info"%>
-		            	</div>
-		            </div>
-
-		            <%if @events[y].nil? == false%>
-			            <div class="col-lg-6 col-sm-6 col-xs-12">
-			            	<div class="white-box">
-			            	 <h3 class="box-title"><%=@events[y][0]%></h3> 
-							<ul class="list-inline m-t-30 p-t-10 two-part">
-	                                <li></li>
-	                                <li class="text-right"><span class="counter" style="color: #042ccc;"><%=@events[y][1]%></span></li>
-	                            </ul> 
-					<%= button_to "View List",dashboard_most_valuable_path,:method=>'post',params: {projectName: "#{@events[y][0]}"},class: "pull-right btn btn-xs btn-info"%>
-			            	</div>
-			            </div>
-		            <%end%>
-
-	            </div>
-	            <%x = x+2%>
-	            <%y = y+2%>
-	            <%i = i+1%>
-	          <%end%>
-	        </div>        
-     <!-- /.row -->      
-	    </div>
-	    <!-- /.container-fluid -->
-	    <%= render 'layouts/footer' %>
-	</div>
-<!-- /#page-wrapper -->
+  <!-- ============================================================== -->
+  <!-- Topbar header - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  
+  <!-- End Top Navigation -->
+  <!-- ============================================================== -->
+  <!-- Left Sidebar - style you can find in sidebar.scss  -->
+  <!-- ============================================================= -->
+  <%= render 'layouts/navbar' %>
+  <!-- ============================================================== -->
+  <!-- End Left Sidebar -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Page Content -->
+  <!-- ============================================================== -->
+  <div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">All Events Being Tracked</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+          <!-- <a href="#" target="_blank" class="btn btn-info pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">DEMO</a>
+           -->
+          <!-- <a href="/dashboard/emptystate" type="button" class="btn btn-info pull-right">
+          empty state
+          </a> -->
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <% if flash[:notice] && @user.sign_in_count<=1 %>
+        <div class="alert alert-success" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <!-- ============================================================== -->
+      
+      <% @events.each_with_index do |event, index| %>
+        <% if index % 2 == 0 %>
+          <div class="row">
+        <% end %>
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+          <div class="white-box">
+            <h3 class="box-title">
+              <%= event[0] %>
+            </h3>
+            <ul class="list-inline m-t-30 p-t-10 two-part">
+              <li></li>
+              <li class="text-right">
+                <span class="counter" style="color: #042ccc;"><%= event[1] %></span>
+              </li>
+            </ul> 
+            <%= button_to "View List", dashboard_most_valuable_path, method: 'post', params: { projectName: "#{event[0]}" }, class: "pull-right btn btn-xs btn-info" %>
+          </div>
+        </div>
+        <% if index % 2 == 1 %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>        
+  <!-- /.row -->      
+  </div>
+  <!-- /.container-fluid -->
+  <%= render 'layouts/footer' %>
+  <!-- /#page-wrapper -->
 </div>
 
