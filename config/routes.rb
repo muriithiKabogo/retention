@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'projects/create'
   post 'projects/get_event_poperties'
   post 'projects/search'
+  post 'projects/get_data_for_chart'
 
   devise_for :users
   get 'dashboard/new'

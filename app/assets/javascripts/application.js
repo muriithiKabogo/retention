@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require jquery.min
 //= require turbolinks
+//= require chart.min
 //= require bootstrap-toggle.min
 //= require bootstrap.min
 //= require jquery.slimscroll

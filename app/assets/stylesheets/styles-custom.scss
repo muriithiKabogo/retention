@@ -1,0 +1,21 @@
+.counter {
+  font-size: 60px;
+  font-weight: 100;
+  font-family: 'Rubik, sans-serif';
+  color: #042ccc;
+}
+
+.caption {
+  // width: 62px;
+}
+
+.graph {
+  min-height: 250px;
+  // background: #ddd;
+  max-height: 500px;
+
+  .chart {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -4,11 +4,28 @@ require 'json'
 class ProjectsController < ApplicationController
   before_action :authenticate_user!
 
+  # analyze page
+  # allow user for search
   def analyze
     @user = current_user
     @events = get_events
   end
 
+  # POST projects/get_data_for_chart
+  # @return array in json
+  def get_data_for_chart
+    event_name = params[:event_name]
+    project_name = current_user.projects.first.projectName.downcase
+    query = "select date(\"$server_time\") as date, count(\"$server_time\") as count from #{project_name}.\"#{event_name}\" GROUP BY date(\"$server_time\") ORDER BY date(\"$server_time\") ASC"
+    ActiveRecord::Base.connection.schema_search_path = "#{project_name},public"
+    result = ActiveRecord::Base.connection.execute(query).to_a
+    respond_to do |format|
+     format.json { render json: result.to_json }
+    end
+  end
+
+  # POST projects/get_event_poperties
+  # @return array in json
   def get_event_poperties
     event_poperties = get_event(params[:event_name])
     respond_to do |format|
@@ -16,6 +33,8 @@ class ProjectsController < ApplicationController
     end
   end
 
+  # POST projects/search
+  # string in json
   def search
     project_name = current_user.projects.first.projectName.downcase
     query = params[:sql]
