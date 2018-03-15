@@ -50,11 +50,6 @@ $( document ).ready(function() {
               scaleLabel: {
                 display: true,
                 labelString: 'Date'
-                time: {
-                    displayFormats: {
-                        quarter: 'MMM YYYY'
-                    }
-              }
             }],
             yAxes: [{
               display: true,
