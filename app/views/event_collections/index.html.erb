@@ -16,7 +16,7 @@
   <!-- Page Content -->
   <!-- ============================================================== -->
   <div id="page-wrapper">
-    <div class="container-fluid">
+    <div class="container-fluid event-collection">
       <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
           <h4 class="page-title">All Events Being Tracked</h4>
@@ -41,13 +41,13 @@
         <% if index % 2 == 0 %>
           <div class="row">
         <% end %>
-        <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div class="col-lg-6 col-sm-6 col-xs-12 graph-box">
           <div class="white-box">
             <h3 class="box-title">
               <%= event[0] %>
             </h3>
             <div class="graph">
-              <canvas id="chart-<%= event[0].parameterize%>" data-event="<%= event[0] %>" data-chart-id="chart-<%= event[0].parameterize%>" class="chart chart-graph" width="100%">
+              <canvas id="chart-<%= event[0].parameterize%>" data-event="<%= event[0] %>" data-chart-id="chart-<%= event[0].parameterize%>" class="chart chart-graph" width="100%" style="min-height: 200px;">
                 chart init...
               </canvas>
             </div>
