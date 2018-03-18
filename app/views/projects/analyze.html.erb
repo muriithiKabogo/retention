@@ -21,6 +21,9 @@
                       <%= flash[:notice] %>
                   </div>
         <% end %>
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 col-xs-12">
+            <div class="white-box">
         <div class="col-md-12">
           <div class="col-md-2">Select Event</div>
           <div class="col-md-10"><%= select_tag :event, options_for_select(@events, @events.first), id: "selectEvent" %></div>
@@ -35,6 +38,9 @@
           <div class="col-md-2"></div>
           <div class="col-md-10">
             <div class="view"><button class="btn btn-info search-sql">Search</button></div>
+          </div>
+        </div>
+            </div>
           </div>
         </div>
 
