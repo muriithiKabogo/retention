@@ -51,17 +51,17 @@ $( document ).ready(function() {
                 display: true,
                 labelString: 'Date'
               },
-              // type: 'time',
-              // time: {
-              //   // unit: 'day',
-              //   displayFormats: {
-              //     day: 'MMM D YYYY'
-              //   }
-              // }
+              type: 'time',
+              time: {
+                // unit: 'day',
+                displayFormats: {
+                  day: 'MMM D YYYY'
+                }
+              }
               ticks: {
                 callback: function(value) { 
                   return moment(value).format('MMM D YYYY');
-                }
+                },
               },
             }],
             yAxes: [{
