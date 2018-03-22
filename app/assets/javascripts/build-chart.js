@@ -61,7 +61,7 @@ $( document ).ready(function() {
               ticks: {
                 callback: function(value) { 
                   return moment(value).format('MMM D YYYY');
-                },
+                }
               },
             }],
             yAxes: [{
