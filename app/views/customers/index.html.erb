@@ -1,4 +1,13 @@
 <%= render 'layouts/header' %>
 <div id="wrapper">
 	<%= render 'layouts/navbar' %>
+	<div id="page-wrapper">
+	    <div class="container-fluid">
+	    <%@customers.each do |customer|%>
+	    	<%=customer.id%>
+	    	<%=customer.created_at%>
+	    	<%=customer.gender%>
+	    <%end%>
+	    </div>
+	</div>
 </div>
