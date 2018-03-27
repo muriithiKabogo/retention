@@ -9,6 +9,11 @@ class CustomersController < ApplicationController
     @customers = ActiveRecord::Base.connection.execute("select * from \"_users\"")
 
     puts @customers.class
+    puts @customers.count
     puts @customers
+
+    @customers.each do |customer|
+    	puts customer
+    end
   end
 end
