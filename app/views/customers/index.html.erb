@@ -4,7 +4,9 @@
 	<div id="page-wrapper">
 	    <div class="container-fluid">
 	    <%@customers.each do |customer|%>
-	    	<%=customer.class%>
+	    	<%=customer["id"]%>
+	    	<%=customer["created_at"]%>
+	    	<%=customer["gender"]%>
 	    <%end%>
 	    </div>
 	</div>
