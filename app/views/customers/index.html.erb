@@ -20,9 +20,15 @@
 				<div class="white-box">
 					<div class="scrollable">
                         <div class="table-responsive">
-	                       <%@customers.each do |customer|%>
-				    		<%=customer["id"]%>
-				   		   <%end%>
+                        	<table id="demo-foo-addrow" class="table m-t-30 table-hover contact-list" data-page-size="10">
+                        		<tbody>
+                        		<%@customers.each do |customer|%>
+                                    <tr>
+                                        <td><%=customer["id"]%></td>
+                                    </tr>
+                                  <%end%>
+                                </tbody>   
+                        	</table>
                         </div>
                     </div>
 
