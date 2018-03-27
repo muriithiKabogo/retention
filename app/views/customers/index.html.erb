@@ -12,9 +12,18 @@
 		        </div>
 		   
 		    </div>
-		     <%@customers.each do |customer|%>
-		    	<%=customer["id"]%>
-		    <%end%>
+		     
 		</div>
+
+		<div class="row">
+			<div class="col-lg-12 col-sm-12 col-xs-12">
+				<div class="white-box">
+					<%@customers.each do |customer|%>
+			    		<%=customer["id"]%>
+			   		 <%end%>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 </div>
