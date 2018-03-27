@@ -13,6 +13,7 @@ class EventCollectionsController < ApplicationController
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     request = Net::HTTP::Post.new(url) 
     request["read_key"] = @user.projects.first.readKey
+    puts request["read_key"]
     puts "The length of the hard coded readkey is #{request["read_key"].length}"
     request.body = "{\"measure\":{},\"startDate\":\"2017-11-20\",\"endDate\":\"#{Date.today.to_s}\"}"
     response = http.request(request)
