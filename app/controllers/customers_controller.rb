@@ -29,7 +29,7 @@ class CustomersController < ApplicationController
 	response = http.request(request)
 	string = response.read_body
   	parsed = JSON.parse(string)
-	@events = parsed["result"]
-	puts @events
+	puts parsed.class
+	puts parsed
   end
 end
