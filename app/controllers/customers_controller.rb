@@ -28,8 +28,6 @@ class CustomersController < ApplicationController
 	request.body = "{\"user\":\"#{@email}\"}"
 	response = http.request(request)
 	string = response.read_body
-  	parsed = JSON.parse(string)
-	puts parsed.class
-	puts parsed
+  	@parsed = JSON.parse(string)
   end
 end
