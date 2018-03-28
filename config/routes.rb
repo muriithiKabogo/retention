@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :customers
+  post 'customers/customer360'
 
   get 'event_collections/index'
   get 'projects/analyze'

@@ -10,7 +10,7 @@ class CustomersController < ApplicationController
 
   end
 
-  def show
+  def customer360
   	
   end
 end
