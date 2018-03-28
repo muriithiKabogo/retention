@@ -17,7 +17,7 @@ class CustomersController < ApplicationController
   def customer360
   	@user = current_user
   	@email = params[:email]
-  	url = URI("https://app.rakam.io//user/get_events")
+  	url = URI("https://nestmetricai.herokuapp.com//user/get_events")
 
 	http = Net::HTTP.new(url.host, url.port)
 	http.use_ssl = true
