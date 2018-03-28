@@ -3,7 +3,7 @@
 	<%= render 'layouts/navbar' %>
 	<div id="page-wrapper">
 	<%@parsed.each do |event|%>
-		<%=event.keys%>
+		<%=event["collection"]%>
 	<%end%>
 	</div>
 </div>
