@@ -30,7 +30,7 @@
                         		<%@customers.each do |customer|%>
                                     <tr>
                                         <td>
-         <%=button_to customer['id'],customers_customer360_path(params: { email: "#{customer['id']}"}),method: 'post' %></td>
+         <%=link_to customer['id'],customers_customer360_path(params: { email: "#{customer['id']}"}),method: 'post' %></td>
                                     </tr>
                                   <%end%>
                                 </tbody>   
