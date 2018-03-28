@@ -26,10 +26,10 @@ class CustomersController < ApplicationController
 	request = Net::HTTP::Post.new(url)
 	request["read_key"] = @user.projects.first.readKey
 	request.body = "{\"user\":\"#{@email}\"}"
-
+	response = http.request(request)
 	string = response.read_body
   	parsed = JSON.parse(string)
 	@events = parsed["result"]
-	puts events
+	puts @events
   end
 end
