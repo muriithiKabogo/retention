@@ -7,7 +7,8 @@ class CustomersController < ApplicationController
     ActiveRecord::Base.connection.schema_search_path = "#{@project_name},public"
     puts ActiveRecord::Base.connection.schema_search_path
     @customers = ActiveRecord::Base.connection.execute("select * from \"_users\"")
-    puts @customers.keys
-    puts @customers.keys.class
+    @customers.each do |customer|
+    	puts customer.keys
+    	end
   end
 end
