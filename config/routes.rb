@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'customers/index'
+  resources :customers
 
   get 'event_collections/index'
   get 'projects/analyze'
