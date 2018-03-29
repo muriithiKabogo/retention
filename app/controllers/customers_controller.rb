@@ -14,6 +14,10 @@ class CustomersController < ApplicationController
 
   end
 
+  def show
+    
+  end
+
   def customer360
   	@user = current_user
   	@email = params[:email]
