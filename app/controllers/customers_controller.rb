@@ -16,7 +16,7 @@ class CustomersController < ApplicationController
 
   def show
 
-    redirect_to customers_customer360_path
+    redirect_to customers_customer360_url
   end
   def customer360
   	@user = current_user
