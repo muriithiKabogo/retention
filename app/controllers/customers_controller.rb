@@ -16,7 +16,7 @@ class CustomersController < ApplicationController
 
   def show
     @email = cookies[:email]
-    redirect_to customers_customer360_path((params: { email: "#{@email}"}))
+    redirect_to customers_customer360_path(params: { email: "#{@email}"})
   end
 
   def customer360
