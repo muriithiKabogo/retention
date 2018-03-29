@@ -14,10 +14,6 @@ class CustomersController < ApplicationController
 
   end
 
-  def show
-
-    redirect_to customers_customer360_url
-  end
   def customer360
   	@user = current_user
   	@email = params[:email]
