@@ -17,21 +17,21 @@ class CustomersController < ApplicationController
   def customer360
   	@user = current_user
   	@email = params[:email]
+    if @email.nil?
+      @email = cookies[:email]
+    end
   	url = URI("https://nestmetricai.herokuapp.com//user/get_events")
 
-	http = Net::HTTP.new(url.host, url.port)
-	http.use_ssl = true
-	http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+  	http = Net::HTTP.new(url.host, url.port)
+  	http.use_ssl = true
+  	http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-	request = Net::HTTP::Post.new(url)
-	request["read_key"] = @user.projects.first.readKey
-	request.body = "{\"user\":\"#{@email}\"}"
-	response = http.request(request)
-	string = response.read_body
-  @parsed = JSON.parse(string)
+  	request = Net::HTTP::Post.new(url)
+  	request["read_key"] = @user.projects.first.readKey
+  	request.body = "{\"user\":\"#{@email}\"}"
+  	response = http.request(request)
+  	string = response.read_body
+    @parsed = JSON.parse(string)
 
-  @parsed.each do |parsed|
-    puts parsed
-  end
   end
 end
