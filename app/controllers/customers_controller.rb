@@ -15,7 +15,7 @@ class CustomersController < ApplicationController
   end
 
   def show
-    
+    redirect_to customer_customer360_path
   end
 
   def customer360
