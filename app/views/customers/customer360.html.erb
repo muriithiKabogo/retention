@@ -44,7 +44,7 @@
 	                                            <%=event["collection"]%> 
 	                                            <div class="sl-right">
 	                                                <div class="m-l-40"><a href="#" class="text-info">John Doe</a> <span class="sl-date">
-	                                                <%=event["properties"]["_time"]%></span>
+	                                                <%=time_ago_in_words(event["properties"]["_time"])%> ago.</span>
 	                                                </div>
 	                                            </div>
 	                                        </div>
