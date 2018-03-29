@@ -2,8 +2,27 @@
 <div id="wrapper">
 	<%= render 'layouts/navbar' %>
 	<div id="page-wrapper">
-	<%@parsed.each do |event|%>
-		<%=event["collection"]%><br>
-	<%end%>
+		<div class="row bg-title">
+		    <div class="container-fluid">
+		    	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+		          <h4 class="page-title">Customer 360&deg;</h4>
+		        </div>
+		        <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
+		          
+		        </div>
+		   
+		    </div>
+		     
+		</div>
+		<!--row-->
+		<div class="row">
+            <div class="col-md-4 col-xs-12">
+                <div class="white-box">
+                <%@parsed.each do |event|%>
+					<%=event["collection"]%><br>
+				<%end%>
+                </div>
+            </div>
+        </div>
 	</div>
 </div>
