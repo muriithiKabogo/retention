@@ -17,7 +17,7 @@ class CustomersController < ApplicationController
   def show
 
     redirect_to customers_customer360_path
-
+  end
   def customer360
   	@user = current_user
   	@email = params[:email]
